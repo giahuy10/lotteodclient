@@ -1,0 +1,95 @@
+{
+  "homepage": {
+    "metaTitle" : "Đài quan sát Lotte Skywalk - Lotte Center Hà Nội",
+    "metaDesc" : "",
+    "slideshow": {
+      "heading1": "Đài quan sát Lotte SkyWalk",
+      "heading2": "Cả thành phố ở dưới chân bạn",
+      "animation1": "Một hòn đảo trên bầu trời",
+      "animation2": "Ngắm trọn Hà Nội trong tầm mắt",
+      "animation3": "Đài quan sát Lotte SkyWalk"
+    },
+    "modtuleTitle": {
+      "overview": "Tổng quan",
+      "eventNPromotion": "Sự kiện - Ưu đãi",
+      "takeAtour": "Tham quan",
+      "takeAtourDesc": "",
+      "galleries": "Thư viện ảnh",
+      "signup": "Đăng ký nhận thông tin",
+      "signupName": "Name",
+      "signupDesc": "Vui lòng nhập email của bạn để nhận được những thông tin ưu đãi và sự kiện mới nhất",
+      "signupButton": "Đăng ký",
+      "signupEmail": "Nhập email"
+    },
+    "signup": {
+      "blankError": "Email không được để trống",
+      "success": "Bạn đã đăng ký thành công",
+      "duplicatedError": "Email này đã đăng ký trước đó"
+    },
+    "footer": {
+      "line1": "54 Liễu Giai, Quận Ba Đình, Hà Nội ",
+      "line2": "LOTTE Center Hanoi Điện thoại : +84-4-3333-6000 Fax : +84-4-3771-3439 ",
+      "line3": "COPYRIGHT ©2019 LOTTE Center Hanoi. All rights reserved."
+    },
+    "readmore": "Xem thêm"
+  },
+  "ticket": {
+    "headerTitle": "Thông tin thăm quan",
+    "headerDesc": "Chúng tôi trân trọng hướng dẫn thông tin sử dụng Đài quan sát.",
+    "ticketCounter": "Quầy vé",
+    "ticketCounterDesc": "Bạn có thể mua vé sử dụng đài quan sát tại quầy vé B1.",
+    "observerionGuide": "Hướng dẫn sử dụng dịch vụ tại Đài quan sát",
+    "useTime": "<span><i class='fa fa-clock'></i> Thời gian sử dụng </span> 09:00 ~ 24:00",
+    "fee": "<span><i class='fa fa-money'></i> Giá vé</span>",
+    "unit": "(VND/Người)",
+    "discount": "<ul><li>Từ 9:00 đến 10:00 Giảm giá 50%. </li> <li>Từ 22:00 đến 23:00 Giảm giá 50%.</li> <li>Ưu đãi gia đình ( tối thiểu 2 người lớn và tối đa 5 trẻ nhỏ).Giảm giá cho 50% cho trẻ nhỏ.</li></ul>",
+    "pricingTable": {
+      "general": "Giá phổ thông",
+      "domestic": "Giá ưu đãi*",
+      "adult" : "Người lớn <br> (trên 12 tuổi)",
+      "children": "Trẻ em (3 ~ 12 tuổi)"
+    },
+    "note": "<ul><li>Giá ưu đãi chỉ áp dụng cho công dân Việt Nam. </li> <li>Trẻ nhỏ dưới 3 tuổi được miễn phí.</li> <li>Giá vé đã bao gồm VAT (10%)</li> <li>Mua vé tại quầy vé B1 trước 23:00.</li></ul>"
+  },
+  "explore": {
+    "headerTitle": "Khám phá đài quan sát Lotte",
+    "headerDesc": "",
+    "tabs": {
+      "tab1": "Giới thiệu",
+      "tab2": "Ẩm thực - Cửa hàng",
+      "tab3": "Thư viện ảnh"
+    },
+    "about": {
+      "text1": "Lotte Center Hà Nội là điểm đến lý tưởng cho mọi người. Nơi đây sẽ đem đến cho bạn trải nghiệm về cuộc sống sang trọng, đẳng cấp bậc nhất, không chỉ là điểm nhấn của Việt Nam, Lotte Center Hà Nội còn thu hút ánh nhìn của toàn thế giới. <br> Đài quan sát Lotte trên tầng 65 của Lotte Center Hà Nội – tòa nhà cao thứ ba tại Việt Nam. Đứng trên độ cao 272m, bạn hãy thả lỏng cơ thể mình và cùng đắm chìm vào cảm giác thú vị, bất ngờ để tận hưởng những phút giây ngắm nhìn toàn cảnh 360độ Hà Nội thân thương chỉ trong nháy mắt. <br> Du khách có thể nhâm nhi tách cà phê, mua sắm đồ lưu niệm và chiêm ngưỡng mọi mặt các cảnh quan của Hà Nội."
+,
+      "text2": "Đài quan sát cung cấp một loạt các trải nghiệm độc đáo chỉ có thể có ở độ cao ly kỳ là 253 mét trong không khí, bao gồm các triển lãm khác nhau dựa trên chủ đề \"Tà áo dài Việt Nam,\" <br> một quán cà phê trên mây và những món quà lưu niệm theo chủ đề tháp độc quyền.",
+      "text3": "Du khách có thể thấy tất cả các khía cạnh khác nhau của Bầu trời Hanoi, <br> luôn thay đổi theo bốn mùa và thời gian trong ngày."
+    },
+    "facilities": {
+      "headerTitle": "Ẩm thực - Cửa hàng",
+      "headerDesc": ""
+    },
+    "gallery": {
+      "headerTitle": "Thư viện ảnh",
+      "headerDesc": ""
+    }
+  },
+  "event": {
+    "headerTitle": "Sự kiện và khuyến mại",
+    "headerDesc": ""
+  },
+  "contact": {
+    "headerTitle": "Liên hệ",
+    "headerDesc": "",
+    "nameLabel": "Họ tên",
+    "nameDesc": "Nhập họ và tên",
+    "mailLabel": "Địa chỉ email",
+    "mailDesc": "Nhập địa chỉ email",
+    "phoneLabel": "Điện thoại",
+    "phoneDesc": "Nhập số điện thoại",
+    "messageLabel": "Lời nhắn",
+    "messageeDesc": "Nhập lời nhắn",
+    "submitLabel": "Gửi"
+  }
+  
+}

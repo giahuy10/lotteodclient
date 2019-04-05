@@ -1,0 +1,22 @@
+
+@import url('https://fonts.googleapis.com/css?family=Muli');
+body {
+  font-family: 'Muli', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+img, video, iframe {
+  max-width: 100%;
+}
+
+.explore {
+  .head-banner {
+    margin-bottom: 0;
+  }
+  .featured-facilities, .galleries {
+    background: none;
+    h2 {
+      display: none;
+    }
+  }
+}
