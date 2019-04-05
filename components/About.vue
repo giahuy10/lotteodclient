@@ -6,13 +6,22 @@
           <img src="/img/explore/Lotte-building-01.png" alt="Lotte center Hanoi">
         </div>
         <div class="col-12 col-md-8">
-						<p v-html="$t('explore.about.text1')"></p>
+          <div class="intro-1">
+            <p v-html="$t('explore.about.text1')"></p>
+          </div>
+          <div class="intro-2">
+            <p v-html="$t('explore.about.text2')"></p>
+          </div>
+          <div class="intro-3">
+            <p v-html="$t('explore.about.text3')"></p>
+          </div>
+
         </div>
       </div>
-					
+
 		</div>
- 
-    
+
+
     <iframe width="560" height="635" src="https://www.youtube-nocookie.com/embed/xz2AEvVxbaA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 </template>
@@ -33,12 +42,18 @@ export default {
   padding: 40px 0;
   .introTxt {
     margin-bottom: 40px;
+    .intro-2 {
+      padding: 65px 0 50px;
+      margin: 75px 0;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+    }
     p {
-     
+
       padding-right: 20px;
-      
+
       text-align: left;
-      
+
       @media screen and (max-width: 767px) {
         border-right: 0;
       }
@@ -46,7 +61,7 @@ export default {
   }
   video, iframe {
     width: 100%;
-    
+
   }
 }
 </style>

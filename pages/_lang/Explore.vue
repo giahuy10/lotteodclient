@@ -20,7 +20,7 @@ export default {
   name: 'explore',
   data () {
     return {
-      headerImage: '/img/header/lotte_about_visual.jpg',
+      headerImage: '/img/bg/4.png',
       component: 'About'
     }
   },
@@ -43,6 +43,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
-  
+
 </style>
 

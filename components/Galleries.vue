@@ -92,14 +92,14 @@ export default {
         pagesTotal: 0
       },
       host: '/img/galleries/homepage/'
-    } 
+    }
   }
 }
 </script>
 <style lang="scss">
 .galleries {
   padding: 40px 0;
-   background-image: url('/img/bg/IMG-3832.jpg');
+   // background-image: url('/img/bg/IMG-3832.jpg');
   // height: 1164px;
 
   /* Create the parallax scrolling effect */
@@ -186,7 +186,7 @@ export default {
 .item {
     display: inline-block;
     background: #fff;
-  
+
     margin: 0 0 5px;
     width: 100%;
 	-webkit-transition:1s ease all;

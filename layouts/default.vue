@@ -12,15 +12,15 @@
               </b-nav-item>
               <LocaleSwitcher/>
             </b-navbar-nav>
-            
+
           </b-collapse>
         </div>
-        
+
       </b-navbar>
-     
+
     </header>
     <main>
-     
+
     <nuxt/>
     </main>
     <footer>
@@ -37,19 +37,19 @@
             </p>
           </div>
           <div id="social-footer" class="col-12 col-md-4 text-right d-flex align-items-center justify-content-end center-mobile">
-            
+
             <div class="social-icon">
-              <a href=""><i class="fa fa-facebook"></i></a>
-              <a href=""><i class="fa fa-twitter"></i></a>
+              <a href=""><img src="https://pngimage.net/wp-content/uploads/2018/05/facebook-logo-blanc-png-1.png" alt=""></a>
+              <a href=""><img src="https://www.iotcluster.fr/img/twitter_logo.png" alt=""></a>
               <a href=""><i class="fa fa-youtube"></i></a>
-             
+
               <a href=""><i class="fa fa-instagram"></i></a>
             </div>
           </div>
         </div>
       </div>
-      
-      
+
+
     </footer>
   </div>
 </template>
@@ -100,7 +100,7 @@ export default {
   },
   created () {
     this.getItems()
-    if (process.browser) { 
+    if (process.browser) {
       window.addEventListener('scroll', this.handleScroll)
       let device = 'xl'
       // xs- 300 -> 399 |  sm - 400 -> 767 | md - 768 -> 1023 | lg : 1024 -> 1366 | xl: > 1366
@@ -117,7 +117,7 @@ export default {
       }
       this.$store.dispatch('setDevice', device)
     }
-    
+
   },
   computed: {
     lang () {
@@ -168,7 +168,7 @@ export default {
     &.sticky {
       background: rgba(0, 0, 0, 0.7);
     }
-    // 
+    //
     @media screen and (max-width: 767px){
       padding-top: 0;
       padding-bottom: 0;
@@ -187,7 +187,7 @@ export default {
           &.active {
             color: #000 !important;
           }
-        
+
         }
       }
     }
@@ -199,30 +199,21 @@ export default {
     font-size: 14px;
     .social-icon {
       a {
-        color: #fff;
-        border-radius: 50px;
-        border: 2px solid #fff;
-        display: inline-block;
-        min-width: 55px;
-        text-align: center;
-        i {
-          font-size: 26px;
-          padding: 13px;
-        }
-        &:hover {
-          background: #ed1d24;
-        }
+       img {
+         width: 32px;
+         margin-right: 10px;
+       }
       }
     }
   }
   #logo-footer, #social-footer {
-    
+
       @media screen and (max-width: 767px) {
         justify-content: center !important;
-      
+
     }
   }
-  
+
   .font-coiny, h2, h3 {
     // font-family: 'Anton', sans-serif !important;
   }

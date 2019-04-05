@@ -40,7 +40,7 @@ export default {
       align-items: center;
       justify-content: center;
       color: #fff;
-      // background: rgba(0, 0, 0, 0.25);
+      background: rgba(0, 0, 0, 0.3);
       padding-top: 85px;
       > div {
         padding: 20px;
@@ -51,7 +51,7 @@ export default {
         @media screen and (max-width: 767px) {
           font-size: 28px;
         }
-      } 
+      }
       p {
         @media screen and (max-width: 767px) {
           display: none;

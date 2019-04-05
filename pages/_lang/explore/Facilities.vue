@@ -1,5 +1,5 @@
 <template>
-  <div class="explore">  
+  <div class="explore">
     <header-banner :title="$t('explore.facilities.headerTitle')" :desc="$t('explore.facilities.headerDesc')" :img="headerImage"></header-banner>
     <ExploreTab component="Facilities" />
     <FeaturedFacilities/>
@@ -23,7 +23,7 @@ export default {
   },
   data () {
     return {
-      headerImage: '/img/header/lotte_about_visual.jpg',
+      headerImage: '/img/bg/9d99c1290cb1d78819b3266242c14b4c.png',
     }
   }
 }

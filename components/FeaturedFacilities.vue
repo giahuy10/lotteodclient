@@ -2,20 +2,22 @@
   <div class="featured-facilities">
     <div class="container">
       <h2 class="text-center">Featured <span>Facilities</span></h2>
-      <div class="row no-gutters" v-for="(item, index) in facilities" :key="index">
-        <div :class="index % 2 == 0 ? 'col-12 col-md-6 order-md-2': 'col-12 col-md-6 order-md-1'">
+      <div class="row">
+        <div class="col-12 col-md-6" v-for="(item, index) in facilities" :key="index">
+
           <div class="fac-img">
             <img :src="item.thumbnail" alt="">
           </div>
-          
-        </div>
-        <div :class="index % 2 == 0 ? 'col-12 col-md-6 order-md-1': 'col-12 col-md-6 order-md-2'">
           <div class="fac-intro">
             <h3>{{item.title}}</h3>
             <p v-text="item.text"></p>
           </div>
         </div>
       </div>
+
+
+
+
     </div>
   </div>
 </template>
@@ -67,7 +69,7 @@ export default {
 .featured-facilities {
   padding: 40px 0;
   background-image: url('/img/bg/facilities.jpg');
-  // height: 1164px; 
+  // height: 1164px;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -89,14 +91,14 @@ export default {
   }
   .fac-intro {
     padding: 20px;
-    height: 100%;
+    // height: 100%;
   }
   .fac-intro {
     box-shadow: 0 0 1px 1px #e3e3e3;
     margin-bottom: 30px;
     background: #fff;
     position: relative;
-    
+
   }
   .row {
     margin-bottom: 30px;

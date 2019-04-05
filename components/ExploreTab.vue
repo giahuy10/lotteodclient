@@ -45,7 +45,12 @@ export default {
 .explore {
 .tabs {
   border-bottom: 2px solid #ed2229;
+
   .list-tab {
+    margin-top: -42px;
+    z-index: 9999;
+    position: relative;
+    background: #fff;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -53,8 +58,12 @@ export default {
       width: calc(100% / 3);
       text-align: center;
       text-transform: uppercase;
+      border-right: 1px solid #ccc;
+      &:last-child {
+        border-right: 0;
+      }
       a {
-        
+
         display: block;
         padding: 10px;
         color: #e4111d ;

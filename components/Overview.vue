@@ -2,13 +2,13 @@
   <div class="overview">
     <!-- <div class="stars"></div>
     <div class="twinkling"></div> -->
-    
+
     <div class="overview-content">
       <div class="container">
-     
+
         <h2 class="text-center font-coiny">{{ $t("homepage.modtuleTitle.overview") }}</h2>
-        <b-card no-body>
-          <b-tabs pills card vertical>
+        <div class="overview-tab">
+          <b-tabs>
             <b-tab v-for="(item, index) in overview" :key="index" :title="item.title" :active="index == 0">
               <div class="row">
                 <div v-for="(sec, i) in item.section" :key="i" class="col-12 col-md-6">
@@ -21,10 +21,10 @@
               </div>
             </b-tab>
           </b-tabs>
-        </b-card>
+        </div>
       </div>
     </div>
-    
+
   </div>
 </template>
 
@@ -60,10 +60,10 @@ export default {
 <style lang="scss">
 .overview {
   // padding: 40px 0;
-  background-image: url('/img/bg/overview.png');
- 
+  // background-image: url('/img/bg/overview.png');
+
    /* Set a specific height */
-  // height: 814px; 
+  // height: 814px;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -71,7 +71,7 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
       position: relative;
-    
+
   @media screen and (min-width: 990px) and (max-width: 1100px) {
     // height: 715px;
   }
@@ -105,7 +105,7 @@ export default {
       display: inline-block;
       background:#e4111d;
       color: #fff;
-      padding: 5px 10px;  
+      padding: 5px 10px;
       margin-top: 10px;
       border-radius: 5px;
       margin-bottom: 10px;
@@ -133,13 +133,32 @@ export default {
        position: relative;
     padding: 40px 0;
         z-index: 99;
-    
-  }
 
+  }
+.nav-tabs
+  {
+    text-align: center;
+    display: block;
+    .nav-item {
+    margin-bottom: -1px;
+    display: inline-block;
+    margin: 0 5px;
+    a {
+      color: #63574c;
+      background: none;
+      border: 1px solid;
+      border-radius: 0;
+      &.active {
+        color: #fff;
+        background: #e4111d;
+      }
+    }
+  }
+}
 }
 .home .overview .ResVideoWidget {
   max-height: 920px;
- 
+
 }
 .home .overview video.bg-video, .home .upcomming-event video.bg-video {
     width: 100%;
@@ -148,7 +167,7 @@ export default {
     height: 930px;
 }
 .home .upcomming-event video.bg-video {
-  
+
     height: 710px;
 }
 

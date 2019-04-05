@@ -9,7 +9,7 @@
         <div class="col-12 col-md-6 d-flex align-items-center justify-content-end">
           <b-form inline>
             <label class="sr-only" for="email">{{ $t("homepage.modtuleTitle.signupName") }}</label>
-            <b-input v-model="subscriber.name" type="text" class="mb-2 mr-sm-2 mb-sm-0" id="name" v-bind:placeholder="$t('homepage.modtuleTitle.signupName')" />
+            <!-- <b-input v-model="subscriber.name" type="text" class="mb-2 mr-sm-2 mb-sm-0" id="name" v-bind:placeholder="$t('homepage.modtuleTitle.signupName')" /> -->
             <b-input v-model="subscriber.email" type="email" class="mb-2 mr-sm-2 mb-sm-0" id="email" v-bind:placeholder="$t('homepage.modtuleTitle.signupEmail')" />
             <b-button variant="danger" @click="subscribe">{{ $t("homepage.modtuleTitle.signupButton") }}</b-button>
           </b-form>
@@ -29,7 +29,7 @@ export default {
         email: '',
         name: ''
       }
-      
+
     }
   },
   methods: {

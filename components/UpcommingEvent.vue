@@ -15,7 +15,7 @@
                   <p>{{event[dateText]}}</p>
                 </div>
               </div>
-              
+
             </div>
           </div>
         </div>
@@ -51,10 +51,10 @@ export default {
 
 <style lang="scss">
 .upcomming-event {
-   background-image: url('/img/bg/IMG_20190401_153603.jpg');
- 
+   background-image: url('http://clipart-library.com/images/kcKorddXi.jpg');
+
    /* Set a specific height */
-  // height: 814px; 
+  // height: 814px;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
