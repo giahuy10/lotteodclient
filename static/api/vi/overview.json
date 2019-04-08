@@ -4,8 +4,13 @@
     "section": [
       {
         "name": "Escalator",
-        "thumbnail": "/img/overview/1.escalator.jpg",
+        "thumbnail": "/img/overview/Escalator- lối vào.jpg",
         "text": "Từ tầng 1 bạn có thể đi thang máy xuống hầm B1 đường dẫn bạn tới cổng khu vực đài quan sát."
+      },
+      {
+        "name": "Lối vào",
+        "thumbnail": "/img/overview/Entrance -KV lối vào.jpg",
+        "text": ""
       },
       {
         "name": "Bamboo Road and Fog gate",
@@ -14,7 +19,7 @@
       },
       {
         "name": "Ticketing Counter",
-        "thumbnail": "/img/overview/1. Ticket counter.jpg",
+        "thumbnail": "/img/overview/Quầy vé_.jpg",
         "text": "Quầy vé sẽ cung cấp các thông tin về giá bán cũng như các chương trình khuyến mãi và nội quy của Đài quan sát."
       }
     ]
@@ -24,17 +29,17 @@
     "section": [
       {
         "name": "Welcome Theater",
-        "thumbnail": "/img/overview/1.welcome theater.jpg",
+        "thumbnail": "/img/overview/Welcome theater- KV lối vào.jpg",
         "text": "Điều đầu tiên bạn sẽ được trải nghiệm với các hình ảnh giới thiệu về tòa Lotte Center cũng như đài quan sát và các địa danh thắng cảnh ở Việt Nam trên màn hình rộng lớn."
       },
       {
         "name": "Photo Zone",
-        "thumbnail": "/img/overview/1. Photo zone.jpeg",
+        "thumbnail": "/img/overview/Photo zone- khu vực chào đón.jpg",
         "text": "Nơi đây là điểm dừng chân chụp ảnh đầu tiên bạn có thể lưu giữ hình ảnh của mình trên phông nền các danh lam thắng cảnh thế giới. Bạn cũng có thể thuê hoặc mua áo dài tại quầy để có được những tấm ảnh vừa mang tính truyền thống vừa mang tính tinh tế, hiện đại."
       },
       {
         "name": "Elevator",
-        "thumbnail": "/img/overview/1. Elevator.jpg",
+        "thumbnail": "/img/overview/Elevator-KV chào đón.jpg",
         "text": "Chắc hẳn đây sẽ là điểm nhấn tuyệt vời tiếp theo khi bạn đến với Đài quan sát. Hãy cùng trải nghiệm tốc độ nhanh của thang máy sẽ dẫn bạn lên Đài quan sát Lotte chỉ trong tích tắc."
       },
       {
@@ -49,7 +54,7 @@
     "section": [
       {
         "name": "Observatory",
-        "thumbnail": "/img/overview/1.Observatory.jpeg",
+        "thumbnail": "/img/overview/Observatory -KV trải nghiệm.jpg",
         "text": "Ống nhòm quan sát thành phố từ xa giúp bạn có cái nhìn tận cảnh từ những địa điểm xa nhất"
       },
       {
@@ -64,16 +69,16 @@
       },
       {
         "name": "Photo Counter",
-        "thumbnail": "/img/overview/1. Love Photo Zone.jpg",
+        "thumbnail": "/img/overview/Photo counter -KV trải nghiệm.jpg",
         "text": "Khu vực lý tưởng không chỉ cho các cặp đôi mà gia đình hay các nhóm bạn đều rất thích thu lưu giữ tấm hình độc đáo cùng với phông nền trái tim"
       },
       {
-        "name": "Freezing sad memories",
-        "thumbnail": "/img/overview/1. Freeingsad hộp bút chì.jpeg",
+        "name": "Freeing sad memories",
+        "thumbnail": "/img/overview/Freeing sad memmories.jpg",
         "text": "Mang lại thành công về khu vực lý tưởng chụp ảnh tại hàn Quốc, hình ảnh hộp bút chì và chiếc tẩy mang ý nghĩa mong muốn những kí ức buồn được lấp đi và đong đầy bởi những phút giây hạnh phúc."
       },
       {
-        "name": "Freezing sad memories",
+        "name": "Freeing sad memories",
         "thumbnail": "/img/overview/1. Cánh thiên thần Freeing sad memories.jpg",
         "text": "Hãy trải nghiệm chụp hình cùng đôi cánh thiên thần này nhé. Thả lỏng và thư giãn cơ thể, tưởng tượng mình đang dang đôi cánh rộng cùng với khao khát hoài bão được chinh phục bầu trời rộng lớn."
       }
@@ -84,12 +89,12 @@
     "section": [
       {
         "name": "Sky Dating Garden",
-        "thumbnail": "/img/overview/IMG_E0214.JPG",
+        "thumbnail": "/img/overview/Sky dating garden -KV tình yêu.jpg",
         "text": "Đặt ngay trước cổng thang máy, khung hình trái tim trên Đài Quan sát mong muốn bất kỳ ai khi chụp hình tại đây đều có những khoảnh khắc gắn kết và vui vẻ bên nhau."
       },
       {
         "name": "Love Photo Zone",
-        "thumbnail": "/img/overview/IMG_E0196.JPG",
+        "thumbnail": "/img/overview/Love story zone - KV tình yêu.jpg",
         "text": "Bạn muốn gửi lời nhắn nhủ cho nửa kia của mình? Vậy hãy cùng chúng tôi truyền tải thông điệp này đến nửa kia của bạn qua Thiệp lời nhắn ở khu vực này nhé."
       }
     ]

@@ -1,12 +1,13 @@
 <template>
   <div class="home">
-    <Pano v-if="videoEnd"/>
-    <Video v-else @videoEnded="endVideo"/>
+    <Slider/>
+    <!-- <Pano v-if="videoEnd"/>
+    <Video v-else @videoEnded="endVideo"/> -->
     <Overview/>
     <UpCommingEvent/>
     <Galleries type="homepage"/>
-    
-   
+
+
     <!-- <Interview/> -->
     <Newsletter/>
     <b-modal class="onlyMain" ref="promotion" centered size="xl"  hide-footer hide-title>
@@ -18,6 +19,7 @@
 </template>
 
 <script>
+import Slider from '~/components/Slider'
 import Pano from '~/components/Pano'
 import Video from '~/components/Video'
 import Interview from '~/components/Interview'
@@ -27,7 +29,7 @@ import Overview from '~/components/Overview'
 import FeaturedFacilities from '~/components/FeaturedFacilities'
 import Galleries from '~/components/Galleries'
 export default {
-  components: { UpCommingEvent, Overview, FeaturedFacilities, Galleries, Newsletter, Interview, Video, Pano },
+  components: { UpCommingEvent, Overview, FeaturedFacilities, Galleries, Newsletter, Interview, Video, Pano, Slider },
   name: 'home',
   data () {
     return {
@@ -69,8 +71,8 @@ export default {
 </script>
 <style lang="scss">
 .home {
-  
-  
+
+
   .onlyMain {
   .modal-dialog {
     .modal-header {

@@ -1,11 +1,11 @@
 <template>
-    <b-nav-item-dropdown right>
+    <b-nav-item-dropdown right class="lang">
       <template slot="button-content">
-         <!-- <img
-            :src="icons[currentLocale]"
+         <img
+            :src="'/img/lang/'+currentLocale+'.png'"
             class="country-icon as-toggle"
-            /> -->
-            {{currentLocale}}
+            />
+            {{icons[currentLocale]}}
         </template>
       <b-dropdown-item v-for="locale in locales" :key="locale.code" @click.prevent="switchLanguage(locale.code)">
         <!-- <img
@@ -14,18 +14,18 @@
             />  -->
             {{locale.name}}
       </b-dropdown-item>
-    
+
     </b-nav-item-dropdown>
 </template>
- 
+
 <script>
 export default {
   data () {
     return {
       icons: {
-        en: 'enIcon',
-        vi: 'viIcon',
-        kr: 'krIcon'
+        en: 'English',
+        vi: 'Vietnamese',
+        kr: 'Korean'
       }
     }
   },
@@ -33,7 +33,7 @@ export default {
     switchLanguage (lang) {
       this.$store.dispatch('setLang', lang)
       localStorage.setItem('lang', lang)
-      if (process.browser) { 
+      if (process.browser) {
         var currentPath = this.$route.path
         var path = currentPath.split('/')
         var route = '/'+lang+currentPath.substring(3, currentPath.length)
@@ -51,7 +51,7 @@ export default {
   }
 }
 </script>
- 
+
 <style scoped>
     .country-icon {
         width: 20px;
@@ -61,13 +61,22 @@ export default {
         border: 1px solid #dee2e6;
         box-shadow: 0px 1px 3px rgba(24, 29, 38, 0.1);
     }
- 
+
     .country-icon.as-toggle {
         margin-top: 5px;
     }
- 
+
     .locale-name {
         display: inline-block;
         vertical-align: baseline;
     }
+
+</style>
+<style lang="scss">
+.lang {
+  > a {
+    border: 1px solid #666;
+    font-size: 20px;
+  }
+}
 </style>

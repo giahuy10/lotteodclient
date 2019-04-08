@@ -1,12 +1,12 @@
 <template>
-  <div class="main-layout" :class="lang">
+  <div class="main-layout" :class="lang + ' ' + $route.name">
     <header class="">
       <b-navbar toggleable="md" :class="navClass" fixed="top" type="dark" variant="">
         <div class="container">
           <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
           <b-navbar-brand :to="homeURL"><img src="/img/logo.png" class="img-logo" alt="Logo"></b-navbar-brand>
           <b-collapse is-nav id="nav_collapse">
-            <b-navbar-nav class="mx-md-auto font-coiny">
+            <b-navbar-nav class="ml-auto">
               <b-nav-item :class="item.name" v-for="(item, index) in items" :key="index" :to="'/'+lang+item.path">
                 {{item.name}}
               </b-nav-item>
@@ -184,10 +184,32 @@ export default {
           padding: 10px 20px !important;
           color: #fff !important;
           font-weight: 400;
-          &.active {
-            color: #000 !important;
+          &.nuxt-link-active {
+            color: #fff!important;
+            background: #ed1c24;
           }
 
+        }
+      }
+    }
+  }
+  .lang-Index {
+    nav.navbar {
+
+      ul {
+        > li {
+          > a {
+            color: #000 !important;
+          }
+        }
+      }
+      &.sticky {
+        ul {
+          > li {
+            > a {
+              color: #fff !important;
+            }
+          }
         }
       }
     }

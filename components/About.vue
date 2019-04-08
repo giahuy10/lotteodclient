@@ -22,7 +22,12 @@
 		</div>
 
 
-    <iframe width="560" height="635" src="https://www.youtube-nocookie.com/embed/xz2AEvVxbaA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <video width="400" controls>
+      <source src="/video/65 FLoor Lotte 222.mp4" type="video/mp4">
+
+      Your browser does not support HTML5 video.
+    </video>
   </div>
 </template>
 
@@ -39,6 +44,9 @@ export default {
 
 <style lang="scss">
 .about {
+  video {
+    width: 100%;
+  }
   padding: 40px 0;
   .introTxt {
     margin-bottom: 40px;

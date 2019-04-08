@@ -20,7 +20,6 @@
 </template>
 
 <script>
-import { subscribeEmail } from '~/plugins/get'
 export default {
   name: 'newsletter',
   data () {

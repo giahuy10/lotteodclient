@@ -13,9 +13,18 @@
               <div class="row">
                 <div v-for="(sec, i) in item.section" :key="i" class="col-12 col-md-6">
                   <div class="overview-item">
-                    <img :src="sec.thumbnail" alt="">
-                    <div class="sec-title font-coiny" v-text="sec.name"></div>
-                    <p v-text="sec.text"></p>
+                    <div class="img-over">
+                      <img :src="sec.thumbnail" alt="">
+                      <div class="text-over">
+                        <div class="text-center" v-text="sec.text"></div>
+                      </div>
+                      <div class="sec-title text-center">
+                        <span  v-text="sec.name"></span>
+                      </div>
+                    </div>
+
+
+
                   </div>
                 </div>
               </div>
@@ -98,18 +107,86 @@ export default {
     }
   }
   .overview-item {
+
+    .img-over {
+      &:hover {
+        cursor: pointer;
+        .text-over {
+          opacity: 1;
+        }
+        .sec-title span {
+          background: #e4111d;
+          &:after, &:before {
+            border-color: #e4111d;
+          }
+          &:after {
+
+            border-right-color: transparent;
+          }
+          &:before {
+
+            border-left-color: transparent;
+          }
+        }
+      }
+        position: relative;
+        margin-bottom: 40px;
+        .text-over {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          right: 0;
+          background: rgba(0, 0, 0, 0.6);
+          color: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 20px;
+          font-size: 18px;
+          opacity: 0;
+          transition: all 1s;
+        }
+        .sec-title {
+
+            margin-bottom: 10px;
+            position: absolute;
+            width: 100%;
+            bottom: -30px;
+            span {
+              background: #000;
+              color: #fff;
+              padding: 10px 20px;
+              position: relative;
+              border-radius: 5px;
+              display: inline-block;
+              &:after, &:before {
+                content: "";
+                width: .2em;
+                bottom: 0;
+                position: absolute;
+                display: block;
+                border: 20px solid #000;
+                // box-shadow: 0px 1px 0px rgba(0,0,0,0.4);
+                //z-index: -2;
+              }
+              &:after {
+                right: -1.35em;
+                border-left-width: .75em;
+                border-right-color: transparent;
+              }
+              &:before {
+                left: -1.35em;
+                border-right-width: .75em;
+                border-left-color: transparent;
+              }
+            }
+        }
+    }
     img {
       width: 100%;
     }
-    .sec-title {
-      display: inline-block;
-      background:#e4111d;
-      color: #fff;
-      padding: 5px 10px;
-      margin-top: 10px;
-      border-radius: 5px;
-      margin-bottom: 10px;
-    }
+
   }
   .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
     color: #fff;

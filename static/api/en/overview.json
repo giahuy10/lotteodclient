@@ -4,8 +4,13 @@
     "section": [
       {
         "name": "Escalator",
-        "thumbnail": "/img/overview/1.escalator.jpg",
+        "thumbnail": "/img/overview/Escalator- lối vào.jpg",
         "text": "From the 1st floor. you can take the escalator down to B1 basement which leads you to the gate of the observatory area."
+      },
+      {
+        "name": "Entrance",
+        "thumbnail": "/img/overview/Entrance -KV lối vào.jpg",
+        "text": ""
       },
       {
         "name": "Bamboo Road and Fog gate",
@@ -14,7 +19,7 @@
       },
       {
         "name": "Ticket counter",
-        "thumbnail": "/img/overview/1. Ticket counter.jpg",
+        "thumbnail": "/img/overview/Quầy vé_.jpg",
         "text": "The ticket counter provides information about the prices as well as promotions and rules of the Observation Deck."
       }
     ]
@@ -24,17 +29,17 @@
     "section": [
       {
         "name": "Welcome Theater",
-        "thumbnail": "/img/overview/1.welcome theater.jpg",
+        "thumbnail": "/img/overview/Welcome theater- KV lối vào.jpg",
         "text": "The first experience is the introduction images of Lotte Center and the Observation Deck on the big screen."
       },
       {
         "name": "Photo Zone",
-        "thumbnail": "/img/overview/1. Photo zone.jpeg",
+        "thumbnail": "/img/overview/Photo zone- khu vực chào đón.jpg",
         "text": "This is the first photographic stop where you can take photos on the background of world landscapes. You can also rent or buy traditional and modern ao dai at the counter."
       },
       {
         "name": "Elevator",
-        "thumbnail": "/img/overview/1. Elevator.jpg",
+        "thumbnail": "/img/overview/Elevator-KV chào đón.jpg",
         "text": "It will be the next great highlight when you come to the Observation Deck. Let's experience the high speed of the elevator which leads you to the top of Lotte Center in a snap."
       },
       {
@@ -49,7 +54,7 @@
     "section": [
       {
         "name": "Observatory",
-        "thumbnail": "/img/overview/1.Observatory.jpeg",
+        "thumbnail": "/img/overview/Observatory -KV trải nghiệm.jpg",
         "text": "Give you a panoramic view from the farthest locations"
       },
       {
@@ -64,16 +69,16 @@
       },
       {
         "name": "Photo Counter",
-        "thumbnail": "/img/overview/1. Love Photo Zone.jpg",
+        "thumbnail": "/img/overview/Photo counter -KV trải nghiệm.jpg",
         "text": "Ideal area not only for couples but also families who like to capture unique pictures with big heart backdrop"
       },
       {
-        "name": "Freezing sad memories",
-        "thumbnail": "/img/overview/1. Freeingsad hộp bút chì.jpeg",
+        "name": "Freeing sad memories",
+        "thumbnail": "/img/overview/Freeing sad memmories.jpg",
         "text": "Pencil box and eraser: Successful in the ideal photography area in Korea, image of pencil box and eraser means the desire for sad memories to be replaced and filled with happy moments."
       },
       {
-        "name": "Freezing sad memories",
+        "name": "Freeing sad memories",
         "thumbnail": "/img/overview/1. Cánh thiên thần Freeing sad memories.jpg",
         "text": "Angel wings: Taking amazing photos with angel wing background. Relax your body, imagine yourself spreading wide wings with the desire to conquer the vast sky."
       }
@@ -84,12 +89,12 @@
     "section": [
       {
         "name": "Sky Dating Garden",
-        "thumbnail": "/img/overview/IMG_E0214.JPG",
+        "thumbnail": "/img/overview/Sky dating garden -KV tình yêu.jpg",
         "text": "Placed in front of the elevator gate, the heart-shaped frame on the Observation Deck wishes everyone taking photos here happiness and closeness"
       },
       {
         "name": "Love Photo Zone",
-        "thumbnail": "/img/overview/IMG_E0196.JPG",
+        "thumbnail": "/img/overview/Love story zone - KV tình yêu.jpg",
         "text": "You want to send a message to your partner? So let us convey this message to your lover through Post Card in this area."
       }
     ]
