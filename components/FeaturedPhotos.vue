@@ -16,6 +16,9 @@
           <img src="/img/overview/1.Sky walk.jpg" alt="">
         </div>
       </div>
+      <div class="text-center">
+        <button class="btn btn-galleries" @click="seeMore">{{ $t("homepage.readmore") }}</button>
+      </div>
     </div>
   </div>
 </template>
@@ -41,6 +44,11 @@ export default {
     margin-bottom: 20px;
     color: #e4111d;
     font-weight: bold;
+  }
+  .btn-galleries {
+    margin-top: 40px;
+    background: #000;
+    color: #fff;
   }
 }
 </style>
