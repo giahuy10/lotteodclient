@@ -90,8 +90,7 @@ export default {
         total: 0, // total item
         pagesCurrent: 1,
         pagesTotal: 0
-      },
-      host: '/img/galleries/homepage/'
+      }
     }
   }
 }
