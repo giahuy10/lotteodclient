@@ -4,22 +4,24 @@
       <div class="toolbar">
         <h2>Photos</h2> <button class="btn btn-success" @click.prevent="openPhoto(0)">Create photo</button>
       </div>
-      
+
       <div class="data">
         <table class="table table-bordered">
           <thead>
             <tr>
-            
+
               <th>Name</th>
               <th>Image</th>
+              <th>Show on homepage</th>
               <th></th>
             </tr>
           </thead>
           <tbody>
             <tr v-for="(item, index) in photos" :key="index">
-           
+
               <td><a href="#" @click.prevent="openPhoto(item._id)" v-text="item.name ? item.name : item.thumbnail"></a></td>
-              <td><img :src="'/img/galleries/homepage/'+item.thumbnail" alt="" class="photo-thumb"></td>
+              <td><img :src="item.thumbnail" alt="" class="photo-thumb"></td>
+              <td>{{item.homepage ? 'Yes' : 'No'}}</td>
               <td>
                 <a href="#" @click.prevent="openPhoto(item._id)" ><i class="fa fa-pencil"></i></a>
                 <a href="#" @click.prevent="deletePhoto(item._id)"><i class="fa fa-trash"></i></a>

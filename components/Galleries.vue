@@ -14,7 +14,7 @@
       <div class="d-block text-center">
         <i class="fa fa-angle-left" @click="change(1)" aria-hidden="true"></i>
 
-        <img :src="items[currentItem] ? items[currentItem].thumbnail : ''" alt="">
+        <img :src="items[currentItem] ? items[currentItem].full : ''" alt="">
 
         <i class="fa fa-angle-right" @click="change(2)" aria-hidden="true"></i>
 
