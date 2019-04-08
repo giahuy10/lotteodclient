@@ -5,7 +5,7 @@
         <h2 class="text-center">{{ $t("homepage.modtuleTitle.galleries") }}</h2>
         <div class="masonry">
           <div v-for="(item, index) in items" :key="index" class="item">
-            <img @click="lightbox(index)" :src="host+item.thumbnail" alt="">
+            <img @click="lightbox(index)" :src="item.thumbnail" alt="">
           </div>
         </div>
       </div>
@@ -14,7 +14,7 @@
       <div class="d-block text-center">
         <i class="fa fa-angle-left" @click="change(1)" aria-hidden="true"></i>
 
-        <img :src="items[currentItem] ? host+items[currentItem].thumbnail : ''" alt="">
+        <img :src="items[currentItem] ? items[currentItem].thumbnail : ''" alt="">
 
         <i class="fa fa-angle-right" @click="change(2)" aria-hidden="true"></i>
 
