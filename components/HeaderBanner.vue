@@ -1,5 +1,5 @@
 <template>
-  <div class="head-banner" :style="'background-image: url('+img+');'">
+  <div class="head-banner" :style="'background-image: url(\''+img+'\');'">
     <div class="heading-title">
       <div class="text-center">
         <h1>{{ title }}</h1>

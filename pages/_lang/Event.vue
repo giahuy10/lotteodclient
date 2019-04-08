@@ -38,7 +38,7 @@
           </ul>
       </nav> -->
     </div>
-    
+
   </div>
 </template>
 
@@ -51,7 +51,7 @@ export default {
   name: 'event',
   data () {
     return {
-      headerImage: '/img/header/lotte_about_visual.jpg',
+      headerImage: '/img/bg/3128.png',
       offset: 4,
     }
   },

@@ -5,12 +5,9 @@
       <div class="ticketing_counter">
         <h3>{{ $t("ticket.ticketCounter") }}</h3>
         <p>{{ $t("ticket.ticketCounterDesc") }}</p>
-        <picture>
-          <source media="(max-width: 375px)" srcset="/img/ticket/345.jpg">
-          <source media="(max-width: 768px)" srcset="/img/ticket/768.jpg">
-          <source media="(max-width: 1024px)" srcset="/img/ticket/1024.jpg">
-          <img src="/img/ticket/20190320_121442.jpg" alt="Flowers" style="width:auto;">
-        </picture>
+
+        <img src="/img/ticket/20190320_121442.jpg" alt="Flowers" style="width:auto;">
+
         <hr>
       </div>
       <div class="observatory_use_guide">
@@ -39,7 +36,7 @@
                     <td v-html="$t('ticket.pricingTable.adult')"></td>
                     <td  class="align-middle">180,000</td>
                   </tr>
-                
+
                   <tr>
                     <td v-html="$t('ticket.pricingTable.children')"></td>
                     <td  class="align-middle">120,000</td>
@@ -57,7 +54,7 @@
     <!-- <div class="rich-snippets">
       <div itemscope itemtype="https://schema.org/Product">
         <span itemprop="brand">Lotte Center Hanoi</span> <span itemprop="name">Observerion Deck Ticket</span>
-        
+
         <span itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
           Average rating: <span itemprop="ratingValue">4.85</span>, based on
           <span itemprop="ratingCount">8936</span> reviews
@@ -69,7 +66,7 @@
         </span>
       </div>
     </div> -->
-    
+
   </div>
 </template>
 

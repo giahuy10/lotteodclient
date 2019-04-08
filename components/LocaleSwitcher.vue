@@ -29,12 +29,15 @@ export default {
       }
     }
   },
+  mounted () {
+    console.log('path', this.$route.path)
+  },
   methods: {
     switchLanguage (lang) {
       this.$store.dispatch('setLang', lang)
       localStorage.setItem('lang', lang)
       if (process.browser) {
-        var currentPath = this.$route.path
+        var currentPath = this.$route.path !== '/' ? this.$route.path : '/vi/index'
         var path = currentPath.split('/')
         var route = '/'+lang+currentPath.substring(3, currentPath.length)
         this.$router.push({path: route})

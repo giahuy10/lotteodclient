@@ -176,6 +176,9 @@ export default {
     }
     ul {
       > li {
+
+         margin: 0 5px;
+
         &.Home {
           display: none;
         }
@@ -193,11 +196,13 @@ export default {
       }
     }
   }
-  .lang-Index {
+  .lang-Index, .index  {
     nav.navbar {
 
       ul {
-        > li {
+
+         li {
+
           > a {
             color: #000 !important;
           }

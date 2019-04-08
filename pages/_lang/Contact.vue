@@ -41,7 +41,7 @@ export default {
   name: 'contact',
   data () {
     return {
-      headerImage: '/img/header/lotte_about_visual.jpg',
+      headerImage: '/img/bg/Welcome theater- KV lối vào.png',
       contact: {
         name: '',
         email: '',

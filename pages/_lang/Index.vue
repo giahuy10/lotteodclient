@@ -5,8 +5,8 @@
     <Video v-else @videoEnded="endVideo"/> -->
     <Overview/>
     <UpCommingEvent/>
-    <Galleries type="homepage"/>
-
+    <!-- <Galleries type="homepage"/> -->
+    <FeaturedPhotos/>
 
     <!-- <Interview/> -->
     <Newsletter/>
@@ -19,6 +19,7 @@
 </template>
 
 <script>
+import FeaturedPhotos from '~/components/FeaturedPhotos'
 import Slider from '~/components/Slider'
 import Pano from '~/components/Pano'
 import Video from '~/components/Video'
@@ -29,7 +30,7 @@ import Overview from '~/components/Overview'
 import FeaturedFacilities from '~/components/FeaturedFacilities'
 import Galleries from '~/components/Galleries'
 export default {
-  components: { UpCommingEvent, Overview, FeaturedFacilities, Galleries, Newsletter, Interview, Video, Pano, Slider },
+  components: { UpCommingEvent, Overview, FeaturedFacilities, Galleries, Newsletter, Interview, Video, Pano, Slider, FeaturedPhotos },
   name: 'home',
   data () {
     return {
