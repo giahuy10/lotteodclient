@@ -48,7 +48,7 @@ export default {
 
   .list-tab {
     margin-top: -42px;
-    z-index: 9999;
+    z-index: 10;
     position: relative;
     background: #fff;
     display: flex;
