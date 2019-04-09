@@ -89,6 +89,7 @@
     "phoneDesc": "Enter your phone number",
     "messageLabel": "Message",
     "messageeDesc": "Leave your message",
-    "submitLabel": "Send"
+    "submitLabel": "Send",
+    "success": "Thank you for contacting us. One of our representatives will be in contact with you shortly regarding your inquiry. If you ever have any questions that require immediate assistance, please call us at +84-4-3333-6000. Have a great day!"
   }
 }

@@ -10,41 +10,48 @@
               <b-nav-item :class="item.name" v-for="(item, index) in items" :key="index" :to="'/'+lang+item.path">
                 {{item.name}}
               </b-nav-item>
+              <li class="nav-item Logout">
+                <a href="#" @click.prevent="logout" class="nav-link" target="_self">
+                  Logout
+                </a>
+              </li>
               <LocaleSwitcher/>
             </b-navbar-nav>
-            
+
           </b-collapse>
         </div>
-        
+
       </b-navbar>
-     
+
     </header>
     <main>
       <div class="container">
         <nuxt/>
       </div>
-    
+
     </main>
     <footer>
       <div class="container">
         <div class="row">
-          
+
           <div class="col-12">
             <p class="text-center">{{ $t("homepage.footer.line1") }}
               <br>{{ $t("homepage.footer.line2") }}
               <br>{{ $t("homepage.footer.line3") }}
             </p>
           </div>
-         
+
         </div>
       </div>
-      
-      
+
+
     </footer>
   </div>
 </template>
 
 <script>
+const Cookie = process.client ? require('js-cookie') : undefined
+
 import LocaleSwitcher from '~/components/LocaleSwitcher'
 import viMenu from '~/static/api/vi/menuDashboard.json'
 import enMenu from '~/static/api/en/menuDashboard.json'
@@ -86,11 +93,18 @@ export default {
         default:
           this.items = viMenu
       }
+    },
+    logout() {
+      console.log('done')
+      // Code will also be required to invalidate the JWT Cookie on external API
+      Cookie.remove('auth')
+      this.$store.commit('SET_AUTH', null)
+      this.$router.push('/'+this.currentLocale+'/login')
     }
   },
   created () {
     this.getItems()
-    if (process.browser) { 
+    if (process.browser) {
       window.addEventListener('scroll', this.handleScroll)
       let device = 'xl'
       // xs- 300 -> 399 |  sm - 400 -> 767 | md - 768 -> 1023 | lg : 1024 -> 1366 | xl: > 1366
@@ -107,7 +121,7 @@ export default {
       }
       this.$store.dispatch('setDevice', device)
     }
-    
+
   },
   computed: {
     lang () {
@@ -162,7 +176,7 @@ export default {
     &.sticky {
       background: rgba(0, 0, 0, 0.7);
     }
-    // 
+    //
     @media screen and (max-width: 767px){
       padding-top: 0;
       padding-bottom: 0;
@@ -209,13 +223,13 @@ export default {
     }
   }
   #logo-footer, #social-footer {
-    
+
       @media screen and (max-width: 767px) {
         justify-content: center !important;
-      
+
     }
   }
-  
+
 
 
 </style>

@@ -40,10 +40,10 @@
 
             <div class="social-icon">
               <a href=""><img src="https://pngimage.net/wp-content/uploads/2018/05/facebook-logo-blanc-png-1.png" alt=""></a>
-              <a href=""><img src="https://www.iotcluster.fr/img/twitter_logo.png" alt=""></a>
+              <!-- <a href=""><img src="https://www.iotcluster.fr/img/twitter_logo.png" alt=""></a>
               <a href=""><i class="fa fa-youtube"></i></a>
 
-              <a href=""><i class="fa fa-instagram"></i></a>
+              <a href=""><i class="fa fa-instagram"></i></a> -->
             </div>
           </div>
         </div>

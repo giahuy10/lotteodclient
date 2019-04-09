@@ -1,35 +1,95 @@
 <template>
   <div class="container">
 
-    <h1>This is secret page.</h1>
-    
-    <button class="btn btn-danger" @click.prevent="logout">Logout</button>
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Popup Image</label>
+      <div class="col-sm-10">
+
+        <input type="url" class="form-control" v-model="item.popup_img" placeholder="Enter image url" >
+
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Pop-up URL</label>
+      <div class="col-sm-10">
+
+        <input type="url" class="form-control" v-model="item.popup_url" placeholder="Enter pop-up url" >
+
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Events on homepage</label>
+      <div class="col-sm-10">
+
+        <input type="url" class="form-control" v-model="item.event_homepage" placeholder="Enter number of events on homepage" >
+
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Event limit</label>
+      <div class="col-sm-10">
+
+        <input type="url" class="form-control" v-model="item.event_limit" placeholder="Enter number of events per page" >
+
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Photos on homepage</label>
+      <div class="col-sm-10">
+
+        <input type="url" class="form-control" v-model="item.photo_homepage" placeholder="Enter number of photos on homepage" >
+
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Photo limit</label>
+      <div class="col-sm-10">
+
+        <input type="url" class="form-control" v-model="item.photo_limit" placeholder="Enter number of photos per page" >
+
+      </div>
+    </div>
+
+    <button class="btn btn-danger" @click.prevent="saveConfig">Update config</button>
   </div>
 </template>
 
 <script>
-const Cookie = process.client ? require('js-cookie') : undefined
 
-import HeaderBanner from '~/components/HeaderBanner.vue'
+var configs = require('~/configuration.json')
+
 export default {
-  components: {
-    'header-banner': HeaderBanner
-  },
+
   data () {
     return {
-      headerImage: '/img/header/lotte_about_visual.jpg',
-      screenWidth: ''
+      item: {
+        popup_img: '',
+        popup_url: '',
+        popup_state: 1,
+        event_homepage: 3,
+        event_limit: 12,
+        photo_homepage: 12,
+        photo_limit: 10
+      }
     }
   },
   layout: 'dashboard',
   middleware: 'authenticated',
+  mounted () {
+    this.item = configs
+  },
   methods: {
-    logout() {
-      console.log('done')
-      // Code will also be required to invalidate the JWT Cookie on external API
-      Cookie.remove('auth')
-      this.$store.commit('SET_AUTH', null)
-      this.$router.push('/'+this.currentLocale+'/login')
+    getConfig () {
+      this.$axios.get('/api/configs/5cac443cb446f511f4b4ce4c')
+        .then(res => {
+          this.item = res.data.item.values
+        })
+        .catch(err => console.log(err))
+    },
+    saveConfig () {
+      this.$axios.put('/api/configs/',  this.item)
+        .then(res => console.log(res))
+        .catch(err => console.log(err))
     }
   },
   computed: {

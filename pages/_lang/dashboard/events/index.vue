@@ -4,12 +4,12 @@
       <div class="toolbar">
         <h2>Events</h2> <button class="btn btn-success" @click.prevent="openEvent(0)">Create event</button>
       </div>
-      
+
       <div class="data">
         <table class="table table-bordered">
           <thead>
             <tr>
-            
+
               <th>Name</th>
               <th>Date</th>
               <th></th>
@@ -17,7 +17,7 @@
           </thead>
           <tbody>
             <tr v-for="(item, index) in events" :key="index">
-           
+
               <td><a href="#" @click.prevent="openEvent(item.slug)" v-text="item.title_vi"></a></td>
               <td v-text="item.date_vi"></td>
               <td>

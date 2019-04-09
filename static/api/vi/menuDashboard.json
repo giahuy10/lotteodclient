@@ -1,22 +1,22 @@
 [
   {
-    "name": "Bảng điều khiển",
-    "path": "/index"
+    "name": "Trang chủ",
+    "path": "/dashboard"
   },
   {
-    "name": "Quản lý hình ảnh",
-    "path": "/explore"
+    "name": "Sự kiện",
+    "path": "/dashboard/events"
   },
   {
-    "name": "Quản lý sự kiện",
-    "path": "/event"
+    "name": "Hình ảnh",
+    "path": "/dashboard/galleries"
   },
   {
-    "name": "Quản lý đặt vé",
-    "path": "/ticket"
+    "name": "Liên hệ",
+    "path": "/dashboard/contacts"
   },
   {
     "name": "Email marketing",
-    "path": "/contact"
+    "path": "/dashboard/newsletter"
   }
 ]

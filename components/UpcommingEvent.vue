@@ -27,6 +27,7 @@
 <script>
 export default {
   name: 'upcomming-event',
+
   methods: {
     openEvent (event) {
       this.$router.push({name: 'lang-event-slug', params: {slug: event.slug, id: event.slug }})

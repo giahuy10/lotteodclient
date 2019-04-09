@@ -60,7 +60,7 @@ export default {
     if (query && query.page) {
       limit = (query.page-1) * 12
     }
-    await store.dispatch('event/getEvents', { limit: limit, locale: store.state.locale })
+    await store.dispatch('event/getEvents', { limit: limit, homepage: 0, locale: store.state.locale })
   },
   computed: {
     events () {

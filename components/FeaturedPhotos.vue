@@ -28,9 +28,6 @@ export default {
     seeMore () {
       this.$router.push({ path: '/'+this.$store.state.locale+'/'+'explore/gallery'})
     }
-  },
-  computed () {
-
   }
 }
 </script>

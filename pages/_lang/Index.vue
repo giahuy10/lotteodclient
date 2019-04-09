@@ -39,7 +39,7 @@ export default {
     }
   },
   async asyncData ({ store }) {
-    await store.dispatch('event/getEvents', { limit: 12, locale: store.state.locale })
+    await store.dispatch('event/getEvents', { limit: 3, homepage: 1, locale: store.state.locale })
   },
   methods: {
     showModal () {

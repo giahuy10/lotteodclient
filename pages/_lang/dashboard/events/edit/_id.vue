@@ -1,7 +1,7 @@
 <template>
   <div class="edit-event">
     <h2>{{ item && item.slug ? 'Update event' : 'Create event'}}</h2>
-   
+
     <form action="" v-on:submit.prevent="saveData">
       <b-tabs content-class="mt-3">
         <b-tab title="Vietnamese" active>
@@ -15,7 +15,7 @@
             <label class="col-sm-2 col-form-label">Description</label>
             <div class="col-sm-10">
               <no-ssr>
-                <editor v-model="item.desc_vi" :toolbar="toolbar" api-key="lxzv6h8kur0syil9hllrjlm94wtumcz3fy6ea2jc0inlsmnb" :init="{plugins: plugins}"></editor>
+                <editor v-model="item.desc_vi" :toolbar="toolbar" api-key="lxzv6h8kur0syil9hllrjlm94wtumcz3fy6ea2jc0inlsmnb" :init="init"></editor>
               </no-ssr>
             </div>
           </div>
@@ -37,7 +37,7 @@
             <label class="col-sm-2 col-form-label">Description</label>
             <div class="col-sm-10">
               <no-ssr>
-                <editor v-model="item.desc_en" :toolbar="toolbar" api-key="lxzv6h8kur0syil9hllrjlm94wtumcz3fy6ea2jc0inlsmnb" :init="{plugins: plugins}"></editor>
+                <editor v-model="item.desc_en" :toolbar="toolbar" api-key="lxzv6h8kur0syil9hllrjlm94wtumcz3fy6ea2jc0inlsmnb" :init="init"></editor>
               </no-ssr>
             </div>
           </div>
@@ -49,16 +49,43 @@
           </div>
         </b-tab>
 
-        <b-tab title="Image">
-          <!-- <no-ssr>
-            <vue-dropzone ref="myVueDropzone" id="dropzone" :options="dropzoneOptions" @vdropzone-success="vsuccess" @vdropzone-error="verror"></vue-dropzone>
-          </no-ssr> -->
+        <b-tab title="Other">
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Image</label>
+            <div class="col-sm-10">
+
+              <input type="file" class="form-control" placeholder="" ref="file" v-on:change="handleFileUpload()">
+
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-12">
+              <div v-if="loading">
+                <img style="width: 40px;" src="https://www.wpfaster.org/wp-content/uploads/2013/06/circle-loading-gif.gif" alt="">
+              </div>
+              <img v-if="item.thumbnail" style="width: 200px;" :src="item.thumbnail" alt="">
+            </div>
+
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Enable</label>
+            <div class="col-sm-10">
+              <input type="checkbox" class="form-check-input" placeholder="" v-model="item.state">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Show on homepage</label>
+            <div class="col-sm-10">
+              <input type="checkbox" class="form-check-input" placeholder="" v-model="item.homepage">
+            </div>
+          </div>
+
         </b-tab>
-        
+
       </b-tabs>
 
       <button class="btn btn-success btn-block" @click.prevent="saveData">Save</button>
-      
+
 
     </form>
   </div>
@@ -66,11 +93,9 @@
 <script>
 // import vue2Dropzone from 'vue2-dropzone'
 import 'vue2-dropzone/dist/vue2Dropzone.min.css'
-import Editor from '@tinymce/tinymce-vue';
+import Editor from '@tinymce/tinymce-vue'
 export default {
-  async asyncData ({ store, query }) {
-    await store.dispatch('event/getEventDetail', { limit: limit, locale: store.state.locale })
-  },
+
   components: {
     'editor': Editor, // <- Important part
     // vueDropzone: vue2Dropzone
@@ -78,9 +103,11 @@ export default {
   data () {
     return {
       //_id: 0,
+      loading: false,
       item: {
         //_id: 0,
         state: 1,
+        homepage: 0,
         title_vi: '',
         title_en: '',
         desc_vi: '',
@@ -90,14 +117,21 @@ export default {
         thumbnail: '',
         slug: ''
       },
-      plugins: 'print preview fullpage searchreplace autolink directionality visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount imagetools textpattern help',
+      init: {
+        plugins: 'print preview fullpage searchreplace autolink directionality visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount imagetools textpattern help',
+        images_upload_url: 'https://admin.lotteskywalk.tk/api/events/upload?editor=true',
+        // images_upload_handler: function (blobInfo, success, failure) {
+        //   console.log(blobInfo)
+        //   console.log(success)
+        //   console.log(failure)
+        //   setTimeout(function () {
+        //     /* no matter what you upload, we will turn it into TinyMCE logo :)*/
+        //     success('http://moxiecode.cachefly.net/tinymce/v9/images/logo.png');
+        //   }, 2000);
+        // }
+      },
+
       toolbar: 'formatselect | bold italic strikethrough forecolor backcolor permanentpen formatpainter | link image media pageembed | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent | removeformat | addcomment',
-      dropzoneOptions: {
-        url: '/api/events/upload',
-        thumbnailWidth: 150,
-        maxFilesize: 5,
-        headers: { "My-Awesome-Header": "header value" }
-      }
     }
   },
   layout: 'dashboard',
@@ -114,16 +148,28 @@ export default {
       if (result.data.item) {
         this.item = result.data.item
       }
-      
-    },
-    vsuccess(file, response) {
-      console.log(response)
-      this.item.thumbnail = '/img/events/'+response.filename
 
     },
-    verror(file) {
-      console.log(file)
-      // window.toastr.error(file.upload.filename, 'Event : vdropzone-error - ' + file.status)
+    handleFileUpload () {
+      this.loading = true
+      this.file = this.$refs.file.files[0];
+      let formData = new FormData();
+      formData.append('file', this.file);
+      this.$axios.post( '/api/events/upload', formData,
+        {
+          headers: {
+              'Content-Type': 'multipart/form-data'
+          }
+        }
+        ).then(res => {
+          console.log(res)
+          this.item.thumbnail = res.data.thumbnail
+          this.loading = false
+        })
+        .catch(err => {
+          this.loading = false
+          console.log(err.response)
+        })
     },
     saveData () {
       if (this.$route.params.id != 0) {
@@ -140,7 +186,7 @@ export default {
         })
         .catch(err => console.log(err.response))
       }
-      
+
     }
   }
 }

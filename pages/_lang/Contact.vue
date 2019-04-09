@@ -4,6 +4,9 @@
     <div class="container">
       <div class="row">
         <div class="col-12 col-md-6">
+          <div v-if="success" class="alert alert-success">
+            {{$t('contact.success')}}
+          </div>
           <form v-on:submit.prevent="submitContact">
             <div class="form-group">
               <label for="" v-text="$t('contact.nameLabel')"></label>
@@ -47,8 +50,8 @@ export default {
         email: '',
         phone: '',
         message: ''
-      }
-
+      },
+      success: false
     }
   },
   head () {
@@ -62,8 +65,17 @@ export default {
   },
   methods: {
     submitContact () {
+
       this.$axios.post('/api/contacts', this.contact)
-        .then(res => console.log(res))
+        .then(res => {
+          this.contact = {
+            name: '',
+            email: '',
+            phone: '',
+            message: ''
+          }
+          this.success = true
+        })
         .catch(err => console.log(err))
     }
   }

@@ -20,7 +20,9 @@ export const mutations = {
 }
 export const actions = {
   async getEvents ({commit}, para) {
-    const events = await this.$axios.$get('/api/events')
+    console.log(para)
+    const events = await this.$axios.$get('/api/events?limit='+para.limit+'&homepage='+para.homepage)
+    console.log(events)
     commit('SET_EVENTS', events)
   },
   async getEventDetail ({commit}, para) {

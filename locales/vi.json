@@ -89,7 +89,8 @@
     "phoneDesc": "Nhập số điện thoại",
     "messageLabel": "Lời nhắn",
     "messageeDesc": "Nhập lời nhắn",
-    "submitLabel": "Gửi"
+    "submitLabel": "Gửi",
+    "success": "Cảm ơn bạn đã liên hệ với chúng tôi. Chúng tôi sẽ phản hồi trong thời gian sớm nhất. Chúc bạn một ngày tốt lành!"
   }
 
 }

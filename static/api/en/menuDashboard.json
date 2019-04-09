@@ -1,22 +1,22 @@
 [
   {
-    "name": "Dashboard",
+    "name": "Homepage",
     "path": "/dashboard"
   },
   {
-    "name": "Events manager",
+    "name": "Events",
     "path": "/dashboard/events"
   },
   {
-    "name": "Galleries manager",
+    "name": "Galleries",
     "path": "/dashboard/galleries"
   },
   {
-    "name": "Contact manager",
+    "name": "Contact",
     "path": "/dashboard/contacts"
   },
   {
-    "name": "Newsletter email",
+    "name": "Newsletter",
     "path": "/dashboard/newsletter"
   }
 ]
