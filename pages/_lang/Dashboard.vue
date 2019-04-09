@@ -56,7 +56,6 @@
 
 <script>
 
-var configs = require('~/configuration.json')
 
 export default {
 
