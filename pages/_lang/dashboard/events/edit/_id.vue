@@ -120,15 +120,6 @@ export default {
       init: {
         plugins: 'print preview fullpage searchreplace autolink directionality visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount imagetools textpattern help',
         images_upload_url: 'https://admin.lotteskywalk.tk/api/events/upload?editor=true',
-        // images_upload_handler: function (blobInfo, success, failure) {
-        //   console.log(blobInfo)
-        //   console.log(success)
-        //   console.log(failure)
-        //   setTimeout(function () {
-        //     /* no matter what you upload, we will turn it into TinyMCE logo :)*/
-        //     success('http://moxiecode.cachefly.net/tinymce/v9/images/logo.png');
-        //   }, 2000);
-        // }
       },
 
       toolbar: 'formatselect | bold italic strikethrough forecolor backcolor permanentpen formatpainter | link image media pageembed | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent | removeformat | addcomment',

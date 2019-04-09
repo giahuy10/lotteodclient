@@ -46,7 +46,10 @@ export default {
   layout: 'dashboard',
   mounted () {
     // this.item = this.$store.state.event.eventDetail
-    this.getItem()
+    if (this.$route.params.id) {
+      this.getItem()
+    }
+
   },
   methods: {
     async getItem () {
