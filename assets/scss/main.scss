@@ -21,3 +21,42 @@ img, video, iframe {
     }
   }
 }
+
+
+
+.page-link {
+  position: relative;
+
+  color: #ed1c24;
+  background-color: #d0d0d0;
+  border: 1px solid #d0d0d0;
+
+  &:hover {
+    z-index: 2;
+    color:#fff;
+    text-decoration: none;
+    background-color: #ed1c24;
+    border-color: #ed1c24;
+  }
+
+}
+
+.page-item {
+
+
+  &.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #ed1c24;
+    border-color: #ed1c24;
+  }
+
+  &.disabled .page-link {
+    color: #ed1c24;
+    pointer-events: none;
+    // Opinionated: remove the "hand" cursor set previously for .page-link
+    cursor: auto;
+    background-color:#ed1c24;
+    border-color: #ed1c24;
+  }
+}

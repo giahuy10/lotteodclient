@@ -99,7 +99,7 @@ export default {
       // Code will also be required to invalidate the JWT Cookie on external API
       Cookie.remove('auth')
       this.$store.commit('SET_AUTH', null)
-      this.$router.push('/'+this.currentLocale+'/login')
+      this.$router.push('/'+this.$store.state.locale+'/login')
     }
   },
   created () {

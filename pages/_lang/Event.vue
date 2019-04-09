@@ -19,7 +19,7 @@
           </div>
         </div>
       </div>
-      <!-- <nav aria-label="Page navigation example" v-if="pagesNumber.length > 1">
+      <nav aria-label="Page navigation example" v-if="pagesNumber.length > 1">
           <ul class="pagination">
               <li v-if="pagination.pagesCurrent > 1" class="page-item">
                   <a class="page-link" href="#" aria-label="Previous"
@@ -36,7 +36,7 @@
                   </a>
               </li>
           </ul>
-      </nav> -->
+      </nav>
     </div>
 
   </div>
@@ -52,57 +52,50 @@ export default {
   data () {
     return {
       headerImage: '/img/bg/3128.png',
-      offset: 4,
     }
   },
   async asyncData ({ store, query }) {
-    var limit = 0
-    if (query && query.page) {
-      limit = (query.page-1) * 12
-    }
-    await store.dispatch('event/getEvents', { limit: limit, homepage: 0, locale: store.state.locale })
+    let page = query ? query.page : 1
+    await store.dispatch('event/getEvents', { page, homepage: 0, locale: store.state.locale })
   },
   computed: {
     events () {
       // console.log(this.$store.state.event.events)
       return this.$store.state.event.events
     },
-    // pagination () {
-    //   return this.$store.state.event.pagination
-    // },
-    // isActived: function () {
-    //   return this.pagination.pagesCurrent;
-    // },
-    // pagesNumber: function () {
-    //   var from = this.pagination.pagesCurrent - this.offset;
-    //   if (from < 1) {
-    //     from = 1;
-    //   }
-    //   var to = from + (this.offset * 2);
-    //   if (to >= this.pagination.pagesTotal) {
-    //     to = this.pagination.pagesTotal;
-    //   }
-    //   var pagesArray = [];
-    //   while (from <= to) {
-    //     pagesArray.push(from);
-    //     from++;
-    //   }
-    //   return pagesArray;
-    // }
+    pagination () {
+      return this.$store.state.event.pagination
+    },
+    isActived: function () {
+      return this.pagination.pagesCurrent;
+    },
+    pagesNumber: function () {
+      var from = this.pagination.pagesCurrent - this.pagination.offset;
+      if (from < 1) {
+        from = 1;
+      }
+      var to = from + (this.pagination.offset * 2);
+      if (to >= this.pagination.pagesTotal) {
+        to = this.pagination.pagesTotal;
+      }
+      var pagesArray = [];
+      while (from <= to) {
+        pagesArray.push(from);
+        from++;
+      }
+      return pagesArray;
+    }
   },
   methods : {
     changePage: function (page) {
       let newPag = {
-        limitstart: (page-1) * this.pagination.limit,
         limit: this.pagination.limit,
         total: this.pagination.total,
-        pagesStart: this.pagination.pagesStart,
-        pagesStop: this.pagination.pagesStop,
         pagesCurrent: page,
         pagesTotal: this.pagination.pagesTotal
       }
       this.$store.dispatch('event/changePagination', newPag)
-      this.$router.push({ path : '/vi/event', query: { page : page}})
+      this.$router.push({ path : '/'+this.$store.state.locale+'/event', query: { page : page}})
     },
     openEvent (event) {
       // console.log(this.$router.options.routes)

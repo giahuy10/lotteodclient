@@ -65,24 +65,25 @@ export default {
       item: {
         popup_img: '',
         popup_url: '',
-        popup_state: 1,
-        event_homepage: 3,
-        event_limit: 12,
-        photo_homepage: 12,
-        photo_limit: 10
+        popup_state: '',
+        event_homepage: '',
+        event_limit: '',
+        photo_homepage: '',
+        photo_limit: ''
       }
     }
   },
   layout: 'dashboard',
   middleware: 'authenticated',
   mounted () {
-    this.item = configs
+    this.getConfig()
   },
   methods: {
     getConfig () {
-      this.$axios.get('/api/configs/5cac443cb446f511f4b4ce4c')
+      this.$axios.get('/configuration.json')
         .then(res => {
-          this.item = res.data.item.values
+          console.log(res)
+          this.item = res.data
         })
         .catch(err => console.log(err))
     },
