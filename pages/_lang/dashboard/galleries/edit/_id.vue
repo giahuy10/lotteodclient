@@ -84,7 +84,9 @@ export default {
     },
     saveData () {
       this.$axios.post('/api/photos', this.item)
-        .then(res => console.log(res))
+        .then(res => {
+          this.$router.push({name: 'lang-dashboard-galleries-edit-id', params: { id: 0 }})
+        })
         .catch(err => console.log(err))
     }
   }

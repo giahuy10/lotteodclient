@@ -5,7 +5,7 @@
       <div class="event-detail" v-html="detail[descText] ">
 
       </div>
-      
+
     </div>
   </div>
 </template>
@@ -19,7 +19,7 @@ export default {
   name: 'event',
   data () {
     return {
-      headerImage: '/img/header/lotte_about_visual.jpg'
+      headerImage: '/img/bg/3128.png'
     }
   },
   async asyncData({ store, params }) {

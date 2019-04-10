@@ -20,7 +20,7 @@
             <tr v-for="(item, index) in photos" :key="index">
 
               <td><a href="#" @click.prevent="openPhoto(item._id)" v-text="item.name ? item.name : item.thumbnail"></a></td>
-              <td><img :src="item.thumbnail" alt="" class="photo-thumb"></td>
+              <td><img :src="item.full" alt="" class="photo-thumb"></td>
               <td>{{item.homepage ? 'Yes' : 'No'}}</td>
               <td>
                 <a href="#" @click.prevent="openPhoto(item._id)" ><i class="fa fa-pencil"></i></a>

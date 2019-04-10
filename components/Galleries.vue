@@ -5,7 +5,7 @@
         <h2 class="text-center">{{ $t("homepage.modtuleTitle.galleries") }}</h2>
         <div class="masonry">
           <div v-for="(item, index) in items" :key="index" class="item">
-            <img @click="lightbox(index)" :src="item.thumbnail" alt="">
+            <img @click="lightbox(index)" :src="item.full" alt="">
           </div>
         </div>
       </div>
