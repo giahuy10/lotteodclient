@@ -5,7 +5,7 @@
         <h2 class="text-center">{{ $t("homepage.modtuleTitle.galleries") }}</h2>
         <div class="masonry">
           <div v-for="(item, index) in items" :key="index" class="item">
-            <img @click="lightbox(index)" :src="item.full" alt="">
+            <img @click="lightbox(index)" :src="item.thumbnail" alt="">
           </div>
         </div>
       </div>
@@ -50,8 +50,13 @@ export default {
     },
     handleScroll (event) {
       // Any code to be executed when the window is scrolled
+      console.log('ok scroll')
       if (this.type !="homepage") {
-        let bottomOfWindow = document.documentElement.scrollTop + window.innerHeight === document.documentElement.offsetHeight
+        console.log(document.documentElement.scrollTop)
+        console.log(window.innerHeight)
+        console.log(document.documentElement.offsetHeight)
+        let bottomOfWindow = Math.ceil(document.documentElement.scrollTop) + window.innerHeight > document.documentElement.offsetHeight - 105
+        console.log(bottomOfWindow)
         if (bottomOfWindow) {
           this.pagination.pagesCurrent++
           this.pagination.limitstart += this.pagination.limit
@@ -63,9 +68,9 @@ export default {
     },
     getItems () {
       let app = this
-      this.$axios.get('/api/photos')
+      this.$axios.get('/api/photos?page='+this.pagination.pagesCurrent)
         .then((res) => {
-          // app.pagination = res.data.pagination
+          app.pagination = res.data.pagination
           app.items = app.items.concat(res.data.items)
           // console.log(app.pagination)
         })
