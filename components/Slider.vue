@@ -17,7 +17,7 @@
 
       <!-- Slides with custom text -->
       <b-carousel-slide v-for="(item, index) in sliders" :key="index" :img-src="item.img">
-        <!-- <h1>Hello world!</h1> -->
+        <h2 v-text="item.heading"></h2>
       </b-carousel-slide>
 
 
@@ -36,34 +36,34 @@ export default {
       sliders: [
         {
           img: '/img/slider/1.JPG',
-          heading: '',
+          heading: this.$t("homepage.slideshow.heading1"),
           desc: ''
         },
         {
           img: '/img/slider/2.JPG',
-          heading: '',
-          desc: ''
-        },
-        {
-          img: '/img/slider/3.JPG',
-          heading: '',
-          desc: ''
-        },
-        {
-          img: '/img/slider/4.JPG',
-          heading: '',
+          heading: this.$t("homepage.slideshow.animation1"),
           desc: ''
         },
         {
           img: '/img/slider/5.JPG',
-          heading: '',
+          heading: this.$t("homepage.slideshow.animation2"),
           desc: ''
         },
         {
           img: '/img/slider/6.JPG',
-          heading: '',
+          heading: this.$t("homepage.slideshow.heading2"),
           desc: ''
-        }
+        },
+        // {
+        //   img: '/img/slider/5.JPG',
+        //   heading: '',
+        //   desc: ''
+        // },
+        // {
+        //   img: '/img/slider/6.JPG',
+        //   heading: '',
+        //   desc: ''
+        // }
       ]
     }
   },
@@ -77,3 +77,15 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+.carousel-caption {
+  bottom: 250px;
+  h2 {
+    font-size: 60px;
+    text-transform: uppercase;
+    text-shadow: 1px -1px 1px #000;
+    font-weight: bold;
+  }
+
+}
+</style>
