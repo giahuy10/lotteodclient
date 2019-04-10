@@ -12,7 +12,7 @@
             <div v-if="loading">
               <img style="width: 40px;" src="https://www.wpfaster.org/wp-content/uploads/2013/06/circle-loading-gif.gif" alt="">
             </div>
-            <img v-if="item.thumbnail" :src="item.thumbnail" alt="">
+            <img v-if="item.full" :src="item.full" alt="" style="width:300px; height: auto">
           </div>
 
         </div>

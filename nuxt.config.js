@@ -56,7 +56,7 @@ module.exports = {
   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
-    baseURL: 'https://admin.lotteskywalk.tk'
+    baseURL: 'http://admin.lotteskywalk.tk'
   },
 
   /*
