@@ -166,7 +166,7 @@ export default {
   }
   nav.navbar {
     &.sticky {
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(255, 255, 255, 0.7);
     }
     //
     @media screen and (max-width: 767px){
@@ -185,7 +185,7 @@ export default {
         > a {
           font-size: 20px;
           padding: 10px 20px !important;
-          color: #fff !important;
+          // color: #fff !important;
           font-weight: 400;
           &.nuxt-link-active {
             color: #fff!important;
@@ -212,7 +212,7 @@ export default {
         ul {
           > li {
             > a {
-              color: #fff !important;
+              // color: #fff !important;
             }
           }
         }
@@ -241,9 +241,7 @@ export default {
     }
   }
 
-  .font-coiny, h2, h3 {
-    // font-family: 'Anton', sans-serif !important;
-  }
+
   .btn-danger {
     color: #fff;
     background-color: #ed1d24;
@@ -262,5 +260,8 @@ export default {
 }
 img.img-logo {
     height: 40px;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(0, 0, 0, 0.5);
 }
 </style>

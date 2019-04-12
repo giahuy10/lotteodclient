@@ -44,10 +44,10 @@ export default {
 <style lang="scss">
 .explore {
 .tabs {
-  border-bottom: 2px solid #ed2229;
+  // border-bottom: 2px solid #ed2229;
 
   .list-tab {
-    margin-top: -42px;
+    margin-top: -40px;
     z-index: 10;
     position: relative;
     background: #fff;
@@ -58,7 +58,7 @@ export default {
       width: calc(100% / 3);
       text-align: center;
       text-transform: uppercase;
-      border-right: 1px solid #ccc;
+      // border-right: 1px solid #ccc;
       &:last-child {
         border-right: 0;
       }
@@ -71,7 +71,7 @@ export default {
         &.active, &:hover {
           background: #373737;
           color: #fff;
-          border-bottom: 1px solid #e4111d;
+          // border-bottom: 1px solid #e4111d;
         }
       }
     }

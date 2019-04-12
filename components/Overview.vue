@@ -18,9 +18,9 @@
                       <div class="text-over">
                         <div class="text-center" v-text="sec.text"></div>
                       </div>
-                      <div class="sec-title text-center">
+                      <!-- <div class="sec-title text-center">
                         <span  v-text="sec.name"></span>
-                      </div>
+                      </div> -->
                     </div>
 
 
