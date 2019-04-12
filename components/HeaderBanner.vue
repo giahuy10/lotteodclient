@@ -40,7 +40,8 @@ export default {
       align-items: center;
       justify-content: center;
       color: #fff;
-      background: rgba(0, 0, 0, 0.3);
+          text-shadow: 1px 1px 2px black;
+      // background: rgba(0, 0, 0, 0.3);
       padding-top: 85px;
       > div {
         padding: 20px;

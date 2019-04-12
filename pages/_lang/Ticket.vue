@@ -79,7 +79,7 @@ export default {
   name: 'ticket',
   data () {
     return {
-      headerImage: '/img/bg/8266049dd0bf5377de621d575258c6d0.png',
+      headerImage: '/img/bg/overview.png',
       screenWidth: ''
     }
   },

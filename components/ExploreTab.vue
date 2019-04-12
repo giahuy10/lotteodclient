@@ -45,7 +45,6 @@ export default {
 .explore {
 .tabs {
   // border-bottom: 2px solid #ed2229;
-
   .list-tab {
     margin-top: -40px;
     z-index: 10;
