@@ -29,28 +29,26 @@
           <div id="logo-footer" class="col-12 col-md-2 d-flex align-items-center center-mobile">
             <img src="/img/logo.png" alt="Logo">
           </div>
-          <div class="col-12 col-md-6">
-            <p class="text-left center-mobile">
+          <div class="col-12 col-md-10">
+            <p class="text-right center-mobile">
               {{ $t("homepage.footer.line1") }}
               <br>{{ $t("homepage.footer.line2") }}
               <br>{{ $t("homepage.footer.line3") }}
             </p>
           </div>
-          <div id="social-footer" class="col-12 col-md-4 text-right d-flex align-items-center justify-content-end center-mobile">
 
-            <div class="social-icon">
-              <a href=""><img src="https://pngimage.net/wp-content/uploads/2018/05/facebook-logo-blanc-png-1.png" alt=""></a>
-              <!-- <a href=""><img src="https://www.iotcluster.fr/img/twitter_logo.png" alt=""></a>
-              <a href=""><i class="fa fa-youtube"></i></a>
-
-              <a href=""><i class="fa fa-instagram"></i></a> -->
-            </div>
-          </div>
         </div>
       </div>
 
 
     </footer>
+    <div class="social-right">
+      <ul>
+        <li><a href="https://www.lottecenter.com.vn" target="_blank"><img src="/img/icons/apple-touch-icon-60x60.png" alt=""></a></li>
+        <li><a href="" target="_blank"><img src="/img/icons/facebook_circle-512.png" alt=""></a></li>
+        <li><a href="" target="_blank"><img src="/img/icons/instagram-colourful-icon.png" alt=""></a></li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -263,5 +261,21 @@ img.img-logo {
 }
 .navbar-dark .navbar-nav .nav-link {
     color: rgba(0, 0, 0, 0.5);
+}
+.social-right {
+  position: fixed;
+  z-index: 9999;
+  right: 0;
+  top: 45%;
+  ul {
+    list-style: none;
+    li {
+      padding: 5px;
+    }
+  }
+  img {
+    width: 45px;
+    height: auto;
+  }
 }
 </style>

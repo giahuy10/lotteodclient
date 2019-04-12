@@ -20,7 +20,7 @@ export default {
   name: 'explore',
   data () {
     return {
-      headerImage: '/img/bg/4.png',
+      headerImage: '/img/bg/ne1.jpg',
       component: 'About'
     }
   },

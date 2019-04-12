@@ -44,7 +44,7 @@ export default {
   name: 'contact',
   data () {
     return {
-      headerImage: '/img/bg/Welcome theater- KV lối vào.png',
+      headerImage: '/img/bg/sun-clouds-blue-sky.jpg',
       contact: {
         name: '',
         email: '',

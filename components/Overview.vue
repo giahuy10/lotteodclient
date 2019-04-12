@@ -18,9 +18,9 @@
                       <div class="text-over">
                         <div class="text-center" v-text="sec.text"></div>
                       </div>
-                      <!-- <div class="sec-title text-center">
+                      <div class="sec-title text-center">
                         <span  v-text="sec.name"></span>
-                      </div> -->
+                      </div>
                     </div>
 
 
@@ -115,18 +115,7 @@ export default {
           opacity: 1;
         }
         .sec-title span {
-          background: #e4111d;
-          &:after, &:before {
-            border-color: #e4111d;
-          }
-          &:after {
-
-            border-right-color: transparent;
-          }
-          &:before {
-
-            border-left-color: transparent;
-          }
+          opacity: 0;
         }
       }
         position: relative;
@@ -152,34 +141,36 @@ export default {
             margin-bottom: 10px;
             position: absolute;
             width: 100%;
-            bottom: -30px;
+            bottom: 40%;
             span {
-              background: #000;
+              // background: #000;
               color: #fff;
+              font-size: 30px;
               padding: 10px 20px;
               position: relative;
               border-radius: 5px;
+              text-shadow: 1px 1px  #000;
               display: inline-block;
-              &:after, &:before {
-                content: "";
-                width: .2em;
-                bottom: 0;
-                position: absolute;
-                display: block;
-                border: 20px solid #000;
-                // box-shadow: 0px 1px 0px rgba(0,0,0,0.4);
-                //z-index: -2;
-              }
-              &:after {
-                right: -1.35em;
-                border-left-width: .75em;
-                border-right-color: transparent;
-              }
-              &:before {
-                left: -1.35em;
-                border-right-width: .75em;
-                border-left-color: transparent;
-              }
+              // &:after, &:before {
+              //   content: "";
+              //   width: .2em;
+              //   bottom: 0;
+              //   position: absolute;
+              //   display: block;
+              //   border: 20px solid #000;
+              //   // box-shadow: 0px 1px 0px rgba(0,0,0,0.4);
+              //   //z-index: -2;
+              // }
+              // &:after {
+              //   right: -1.35em;
+              //   border-left-width: .75em;
+              //   border-right-color: transparent;
+              // }
+              // &:before {
+              //   left: -1.35em;
+              //   border-right-width: .75em;
+              //   border-left-color: transparent;
+              // }
             }
         }
     }

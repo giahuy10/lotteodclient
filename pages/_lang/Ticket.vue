@@ -3,12 +3,11 @@
     <header-banner :title="$t('ticket.headerTitle')" :desc="$t('ticket.headerDesc')" :img="headerImage"></header-banner>
     <div class="container">
       <div class="ticketing_counter">
-        <h3>{{ $t("ticket.ticketCounter") }}</h3>
+        <!-- <h3>{{ $t("ticket.ticketCounter") }}</h3>
         <p>{{ $t("ticket.ticketCounterDesc") }}</p>
 
-        <img src="/img/ticket/20190320_121442.jpg" alt="Flowers" style="width:auto;">
 
-        <hr>
+        <hr> -->
       </div>
       <div class="observatory_use_guide">
         <h3>{{ $t("ticket.observerionGuide") }}</h3>

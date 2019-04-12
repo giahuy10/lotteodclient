@@ -53,10 +53,10 @@ export default {
     }
   },
   mounted () {
-    if (!sessionStorage.getItem('openPopup')) {
-      this.showModal()
-      sessionStorage.setItem('openPopup', 1)
-    }
+    // if (!sessionStorage.getItem('openPopup')) {
+    //   this.showModal()
+    //   sessionStorage.setItem('openPopup', 1)
+    // }
     this.screenWidth = this.$store.state.screenWidth
   },
   head () {
