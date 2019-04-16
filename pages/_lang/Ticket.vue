@@ -46,6 +46,11 @@
         <!-- end fare_table -->
         <div class="board_foot" v-html="$t('ticket.note')">
         </div>
+        <p v-html="$t('ticket.buy')"></p>
+        <ul>
+          <li><a href="https://www.adayroi.com/ve-tron-goi-tham-quan-dai-quan-sat-lotte-danh-cho-01-nguoi-p-2118702?offer=2118702_QJT" target="_blank">Adayroi</a></li>
+          <li><a href="https://www.dealtoday.vn/ha-noi/ve-tron-goi-tham-quan-va-post-card-tai-dai-quan-sat-lotte-42731" target="_blank">DealToday</a></li>
+        </ul>
         <!-- end board_foot -->
       </div>
 
@@ -101,6 +106,8 @@ export default {
   p {
     span {
       color: #ed1d24;
+      font-weight: bold;
+      font-size: 18px;
     }
   }
 }

@@ -39,8 +39,9 @@
     "ticketCounter": "Quầy vé",
     "ticketCounterDesc": "Bạn có thể mua vé sử dụng đài quan sát tại quầy vé B1.",
     "observerionGuide": "Hướng dẫn sử dụng dịch vụ tại Đài quan sát",
-    "useTime": "<span><i class='fa fa-clock'></i> Thời gian sử dụng </span> 09:00 ~ 24:00",
-    "fee": "<span><i class='fa fa-money'></i> Giá vé</span>",
+    "useTime": "<span> Thời gian sử dụng </span> 09:00 ~ 24:00",
+    "fee": "<span> Giá vé</span>",
+    "buy": "<span> Mua vé </span>",
     "unit": "(VND/Người)",
     "discount": "<ul><li>Từ 9:00 đến 10:00 Giảm giá 50%. </li> <li>Từ 22:00 đến 23:00 Giảm giá 50%.</li> <li>Ưu đãi gia đình ( tối thiểu 2 người lớn và tối đa 5 trẻ nhỏ).Giảm giá cho 50% cho trẻ nhỏ.</li></ul>",
     "pricingTable": {

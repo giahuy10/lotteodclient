@@ -39,9 +39,10 @@
     "ticketCounter": "Ticketing Counter",
     "ticketCounterDesc": "You can buy entrance ticket at B1 ticket counter.",
     "observerionGuide": "Observation Deck use guide",
-    "useTime": "<span><i class='fa fa-clock'></i> Use Time </span> 09:00 ~ 24:00 (Ticketing Counter close at 23:00)",
-    "fee": "<span><i class='fa fa-money'></i> Fee</span>",
+    "useTime": "<span> Use Time </span> 09:00 ~ 24:00 (Ticketing Counter close at 23:00)",
+    "fee": "<span> Fee</span>",
     "unit": "(Unit : VND/Person)",
+    "buy": "<span> Buy ticket </span>",
     "discount": "<ul><li>From 9:00 to 10:00 Discount 50%. </li> <li>From 22:00 to 23:00 Discount 50%.</li> <li>Family package( Min 2 adults & Max 5 kids) Get 50% off for kid only.</li></ul>",
     "pricingTable": {
       "general": "General",

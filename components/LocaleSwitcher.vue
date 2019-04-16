@@ -80,6 +80,7 @@ export default {
   > a {
     border: 1px solid #666;
     font-size: 20px;
+    color: #666 !important;
   }
 }
 </style>
