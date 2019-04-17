@@ -1,7 +1,7 @@
 <template>
   <div class="upcomming-event">
     <div class="container">
-      <h2 class="text-center">{{ $t("homepage.modtuleTitle.eventNPromotion") }}</h2>
+      <h2 class="text-center" @click="$router.push({ path: '/'+$store.state.locale+'/event'})">{{ $t("homepage.modtuleTitle.eventNPromotion") }}</h2>
       <div class="events">
         <div class="inner">
           <div class="row">
@@ -69,6 +69,9 @@ export default {
     margin-bottom: 20px;
     color: #e4111d;
     font-weight: bold;
+    &:hover {
+      cursor: pointer;
+    }
     span {
       color: #e4111d;
     }
