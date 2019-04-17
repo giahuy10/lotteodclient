@@ -19,7 +19,8 @@
       "signupName": "Name",
       "signupDesc": "Enter your email address below to receive periodic emails about special offers and upcoming events.",
       "signupButton": "Signup",
-      "signupEmail": "Enter your email"
+      "signupEmail": "Enter your email",
+      "signupSuccess": "Thanks for your subscription!"
     },
     "signup": {
       "blankError": "Email cannot be blank",

@@ -19,7 +19,8 @@
       "signupName": "Name",
       "signupDesc": "Vui lòng nhập email của bạn để nhận được những thông tin ưu đãi và sự kiện mới nhất",
       "signupButton": "Đăng ký",
-      "signupEmail": "Nhập email"
+      "signupEmail": "Nhập email",
+      "signupSuccess": "Cảm ơn bạn đã đăng ký!"
     },
     "signup": {
       "blankError": "Email không được để trống",
