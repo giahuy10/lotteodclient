@@ -16,11 +16,11 @@
       </a>
 
     </div>
-    <b-modal class="onlyMain" ref="promotion" centered size="xl"  hide-footer hide-title>
+    <!-- <b-modal class="onlyMain" ref="promotion" centered size="xl"  hide-footer hide-title>
       <div class="d-block text-center">
         <img src="/img/events/web banner-promo -02.png" alt="">
       </div>
-    </b-modal>
+    </b-modal> -->
   </div>
 </template>
 

@@ -52,7 +52,7 @@ export default {
 
 <style lang="scss">
 .upcomming-event {
-   background-image: url('http://clipart-library.com/images/kcKorddXi.jpg');
+   background-image: url('/img/bg/event-home.jpg');
 
    /* Set a specific height */
   // height: 814px;
