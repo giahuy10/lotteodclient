@@ -12,7 +12,7 @@
     <Newsletter/>
     <div class="reservation">
       <a href="#" @click.prevent="$router.push({ path: '/'+$store.state.locale+'/'+'ticket'})">
-        <img src="https://www.lottecenter.com.vn/eng/images/main_content_img4.jpg" alt="">
+        <img src="/img/main_content_img4.jpg" alt="">
       </a>
 
     </div>

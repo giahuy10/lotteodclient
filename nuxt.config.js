@@ -68,5 +68,10 @@ module.exports = {
     */
     extend(config, ctx) {
     }
+  },
+  render: {
+    static: {
+      maxAge: 1000 * 60 * 60 * 24 * 7
+    }
   }
 }
