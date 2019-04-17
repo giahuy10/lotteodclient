@@ -11,7 +11,10 @@
     <!-- <Interview/> -->
     <Newsletter/>
     <div class="reservation">
-      <img src="https://www.lottecenter.com.vn/eng/images/main_content_img4.jpg" alt="">
+      <a href="#" @click.prevent="$router.push({ path: '/'+$store.state.locale+'/'+'ticket'})">
+        <img src="https://www.lottecenter.com.vn/eng/images/main_content_img4.jpg" alt="">
+      </a>
+
     </div>
     <b-modal class="onlyMain" ref="promotion" centered size="xl"  hide-footer hide-title>
       <div class="d-block text-center">
