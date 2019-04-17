@@ -88,12 +88,15 @@ export default {
     }
   },
   mounted () {
-    this.scroller.full = this.$refs.scroller_inner.clientWidth
-    this.scroller.screen = this.$refs.scroller.clientWidth
-    this.scroller.max = this.scroller.full - this.scroller.screen
-    console.log('full: ', this.scroller.full)
-    console.log('screen: ', this.scroller.screen)
-    console.log('max: ', this.scroller.max)
+
+      // here is the Vue code
+      this.scroller.full = 2570 // this.$refs.scroller_inner.clientWidth
+      this.scroller.screen = this.$refs.scroller.clientWidth
+      this.scroller.max = this.scroller.full - this.scroller.screen
+      console.log('full: ', this.scroller.full)
+      console.log('screen: ', this.scroller.screen)
+      console.log('max: ', this.scroller.max)
+
   },
   methods: {
     seeMore () {
