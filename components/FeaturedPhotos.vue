@@ -120,6 +120,9 @@ export default {
     scroll (type) {
       if (type === 1) {
         // next
+        console.log('left: ', this.scroller.left)
+        console.log('step: ', this.scroller.step)
+        console.log('max: ', this.scroller.max)
         if (this.scroller.left - this.scroller.step * 2 < 0 - this.scroller.max) {
           this.scroller.left = 0 - this.scroller.max
         } else {

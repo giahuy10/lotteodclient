@@ -11,7 +11,7 @@
     <!-- <Interview/> -->
     <Newsletter/>
     <div class="reservation">
-      <img src="https://static.wixstatic.com/media/ce9177_0b5b8b6e1fda4bb2af6221eeaddacff6~mv2.gif" alt="">
+      <img src="https://www.lottecenter.com.vn/eng/images/main_content_img4.jpg" alt="">
     </div>
     <b-modal class="onlyMain" ref="promotion" centered size="xl"  hide-footer hide-title>
       <div class="d-block text-center">
@@ -105,7 +105,7 @@ export default {
   position: fixed;
   bottom: 0;
   right: 0;
-  width: 300px;
+  width: 150px;
   z-index: 9999;
 }
 
