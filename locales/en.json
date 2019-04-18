@@ -29,7 +29,7 @@
     },
     "footer": {
       "line1": "54 Lieu Giai, Ba Dinh District, Hanoi",
-      "line2": "LOTTE Center Hanoi Tel : +84-4-3333-6000 Fax : +84-4-3771-3439",
+      "line2": "LOTTE Center Hanoi Tel : 024 3333 6018 Mobile : 098 7243 922 ",
       "line3": "COPYRIGHT ©2019 LOTTE enter Hanoi. All rights reserved."
     },
     "readmore": "Readmore"
@@ -37,21 +37,21 @@
   "ticket": {
     "headerTitle": "Visit Information",
     "headerDesc": "We would like to Introduce our Observation Deck.",
-    "ticketCounter": "Ticketing Counter",
+    "ticketCounter": "Ticket Counter",
     "ticketCounterDesc": "You can buy entrance ticket at B1 ticket counter.",
     "observerionGuide": "Observation Deck use guide",
-    "useTime": "<span> Use Time </span> 09:00 ~ 24:00 (Ticketing Counter close at 23:00)",
+    "useTime": "<span> Use Time </span> 09:00 ~ 24:00 (Ticket Counter close at 23:00)",
     "fee": "<span> Fee</span>",
     "unit": "(Unit : VND/Person)",
     "buy": "<span> Buy ticket </span>",
-    "discount": "<ul><li>From 9:00 to 10:00 Discount 50%. </li> <li>From 22:00 to 23:00 Discount 50%.</li> <li>Family package( Min 2 adults & Max 5 kids) Get 50% off for kid only.</li></ul>",
+    "discount": "<ul><li>From 9:00 to 10:00 Discount 50%. </li> <li>From 22:00 to 23:00 Discount 50%.</li> <li>Family package (Min 2 adults & Max 5 kids) Get 50% off for kid only.</li></ul>",
     "pricingTable": {
       "general": "General",
       "domestic": "Domestic* <br> Discount",
       "adult" : "Adult <br> (Over 12 Years)",
       "children": "Children (3 ~ 12 Years)"
     },
-    "note": "<ul><li>The domestic discount applies to Vietnamese citizen only. </li> <li>3 Years Children or under age are free.</li> <li>All ticket fares are included VAT(10%)</li> <li>Purchasing the tickets at Ticketing Counter located in B1 floor.</li></ul> <p>Observation deck on the day until 23:00 </p>"
+    "note": "<ul><li>The domestic discount applies to Vietnamese citizen only. </li> <li>3 Years Children or under age are free.</li> <li>All ticket fares are included VAT(10%)</li> <li>Purchasing the tickets at Ticket Counter located in B1 floor.</li></ul> <p>Observation deck on the day until 23:00 </p>"
   },
   "explore": {
     "headerTitle": "Explore Observation Deck",

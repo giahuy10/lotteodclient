@@ -5,7 +5,7 @@
       <div class="scroller-wrap">
         <div class="scroller" ref="scroller">
           <div class="scroller-inner" ref="scroller_inner" :style="'left:'+scroller.left+'px'">
-            <div class="scroller-item" v-for="(item, index) in items" :key="index" ref="scroller_item">
+            <div class="scroller-item" v-for="(item, index) in items" :key="index" ref="scroller_items">
               <img :src="'/img/galleries/homepage/'+item.thumbnail" alt="" @click="openImg(index)">
             </div>
           </div>
@@ -88,14 +88,28 @@ export default {
     }
   },
   mounted () {
+    let app = this
+    if (process.client) {
+      window.addEventListener("load", function(event) {
+        app.$refs.scroller_items.forEach(element => {
+          console.log(element.offsetWidth)
+          app.scroller.full +=element.offsetWidth
+        });
+        app.scroller.screen = app.$refs.scroller.clientWidth
+        app.scroller.max = app.scroller.full - app.scroller.screen
+      });
+    }
 
+      // console.log(this.$refs.scroller_inner)
+      // this.$refs.scroller_items.forEach(element => {
+      //   this.scroller.full += element.offsetWidth
+      // });
       // here is the Vue code
-      this.scroller.full = 2570 // this.$refs.scroller_inner.clientWidth
-      this.scroller.screen = this.$refs.scroller.clientWidth
-      this.scroller.max = this.scroller.full - this.scroller.screen
-      console.log('full: ', this.scroller.full)
-      console.log('screen: ', this.scroller.screen)
-      console.log('max: ', this.scroller.max)
+      // this.scroller.full = 2575 // this.$refs.scroller_inner.clientWidth
+
+      // console.log('full: ', this.scroller.full)
+      // console.log('screen: ', this.scroller.screen)
+      // console.log('max: ', this.scroller.max)
 
   },
   methods: {
