@@ -24,7 +24,7 @@
 
 
     <video width="400" controls>
-      <source src="/video/65 FLoor Lotte 222.mp4" type="video/mp4">
+      <source src="/video/new-explore.mp4" type="video/mp4">
 
       Your browser does not support HTML5 video.
     </video>
