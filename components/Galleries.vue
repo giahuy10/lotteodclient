@@ -193,7 +193,7 @@ export default {
 
     margin: 0 0 5px;
     width: 100%;
-	-webkit-transition:1s ease all;
+	  transition:1s ease all;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;

@@ -44,9 +44,9 @@
     </footer>
     <div class="social-right">
       <ul>
-        <li><a href="https://www.lottecenter.com.vn" target="_blank"><img src="/img/icons/apple-touch-icon-60x60.png" alt=""></a></li>
-        <li><a href="https://www.facebook.com/observationdeckhanoi/" target="_blank"><img src="/img/icons/facebook_circle-512.png" alt=""></a></li>
-        <li><a href="https://www.instagram.com/observationdeckhanoi/" target="_blank"><img src="/img/icons/instagram-colourful-icon.png" alt=""></a></li>
+        <li><a href="https://www.lottecenter.com.vn" title="Lotte Center Hanoi" target="_blank"><img src="/img/icons/apple-touch-icon-60x60.png" alt=""></a></li>
+        <li><a href="https://www.facebook.com/observationdeckhanoi/" title="Facebook" target="_blank"><img src="/img/icons/facebook_circle-512.png" alt=""></a></li>
+        <li><a href="https://www.instagram.com/observationdeckhanoi/" title="Instagram" target="_blank"><img src="/img/icons/instagram-colourful-icon.png" alt=""></a></li>
       </ul>
     </div>
   </div>
@@ -207,15 +207,15 @@ export default {
           }
         }
       }
-      &.sticky {
-        ul {
-          > li {
-            > a {
-              // color: #fff !important;
-            }
-          }
-        }
-      }
+      // &.sticky {
+      //   ul {
+      //     > li {
+      //       > a {
+      //         // color: #fff !important;
+      //       }
+      //     }
+      //   }
+      // }
     }
   }
   footer {

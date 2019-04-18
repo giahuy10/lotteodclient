@@ -180,7 +180,7 @@ export default {
     height: 200px;
     overflow: hidden;
     .scroller-inner {
-      width: max-content;
+      width: 2575px;
       position: relative;
       left: 0;
       transition: all 0.5s;
