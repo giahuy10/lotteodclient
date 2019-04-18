@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <b-carousel v-if="$device.isMobile"
+    <b-carousel v-if="device == 'mobile'"
       id="carousel-mobile"
       v-model="slide"
       :interval="4000"
@@ -24,7 +24,29 @@
 
 
     </b-carousel>
+    <b-carousel v-else-if="device == 'tablet'"
+      id="carousel-tablet"
+      v-model="slide"
+      :interval="4000"
+      fade
+      controls
+      indicators
+      background="#ababab"
+      img-width="1024"
+      img-height="480"
+      style="text-shadow: 1px 1px 2px #333;"
+      @sliding-start="onSlideStart"
+      @sliding-end="onSlideEnd"
+    >
 
+      <!-- Slides with custom text -->
+      <b-carousel-slide v-for="(item, index) in sliders" :key="index" :img-src="item.imgT">
+        <h2 v-text="item.heading"></h2>
+      </b-carousel-slide>
+
+
+
+    </b-carousel>
     <b-carousel v-else
       id="carousel-desk"
       v-model="slide"
@@ -54,32 +76,61 @@
 </template>
 <script>
 export default {
+  mounted () {
+    if (process.client) {
+      this.screenWidth = Math.max(
+        document.body.scrollWidth,
+        document.documentElement.scrollWidth,
+        document.body.offsetWidth,
+        document.documentElement.offsetWidth,
+        document.documentElement.clientWidth
+      )
+      console.log('widht= ', this.screenWidth)
+    }
+  },
+  computed: {
+    device () {
+      if (this.screenWidth > 1366) {
+        return 'desk'
+      } else if (this.screenWidth > 767) {
+        return 'tablet'
+      } else {
+        return 'mobile'
+      }
+
+    }
+  },
   data() {
     return {
+      screenWidth: 1920,
       slide: 0,
       sliding: null,
       sliders: [
         {
           img: '/img/slider/1.webp',
           imgM: '/img/slider/1-mobile.webp',
+          imgT: '/img/slider/1-tablet.webp',
           heading: this.$t("homepage.slideshow.heading1"),
           desc: ''
         },
         {
           img: '/img/slider/2.webp',
           imgM: '/img/slider/2-mobile.webp',
+          imgT: '/img/slider/3-tablet.webp',
           heading: this.$t("homepage.slideshow.animation1"),
           desc: ''
         },
         {
           img: '/img/slider/5.webp',
           imgM: '/img/slider/5-mobile.webp',
+          imgT: '/img/slider/5-tablet.webp',
           heading: this.$t("homepage.slideshow.animation2"),
           desc: ''
         },
         {
           img: '/img/slider/6.webp',
           imgM: '/img/slider/6-mobile.webp',
+          imgT: '/img/slider/6-tablet.webp',
           heading: this.$t("homepage.slideshow.heading2"),
           desc: ''
         },
