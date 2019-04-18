@@ -52,7 +52,7 @@ export default {
 
 <style lang="scss">
 .upcomming-event {
-   background-image: url('/img/bg/event-home.jpg');
+   background-image: url('/img/bg/event-home.webp');
 
    /* Set a specific height */
   // height: 814px;

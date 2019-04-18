@@ -12,7 +12,7 @@
     <Newsletter/>
     <div class="reservation">
       <a href="#" @click.prevent="$router.push({ path: '/'+$store.state.locale+'/'+'ticket'})">
-        <img src="/img/main_content_img4.jpg" alt="">
+        <img src="/img/main_content_img4.webp" alt="Buy ticket">
       </a>
 
     </div>
