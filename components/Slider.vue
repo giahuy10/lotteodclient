@@ -1,7 +1,32 @@
 <template>
   <div>
-    <b-carousel
-      id="carousel-1"
+
+    <b-carousel v-if="$device.isMobile"
+      id="carousel-mobile"
+      v-model="slide"
+      :interval="4000"
+      fade
+      controls
+      indicators
+      background="#ababab"
+      img-width="1024"
+      img-height="480"
+      style="text-shadow: 1px 1px 2px #333;"
+      @sliding-start="onSlideStart"
+      @sliding-end="onSlideEnd"
+    >
+
+      <!-- Slides with custom text -->
+      <b-carousel-slide v-for="(item, index) in sliders" :key="index" :img-src="item.imgM">
+        <h2 v-text="item.heading"></h2>
+      </b-carousel-slide>
+
+
+
+    </b-carousel>
+
+    <b-carousel v-else
+      id="carousel-desk"
       v-model="slide"
       :interval="4000"
       fade
@@ -36,21 +61,25 @@ export default {
       sliders: [
         {
           img: '/img/slider/1.webp',
+          imgM: '/img/slider/1-mobile.webp',
           heading: this.$t("homepage.slideshow.heading1"),
           desc: ''
         },
         {
           img: '/img/slider/2.webp',
+          imgM: '/img/slider/2-mobile.webp',
           heading: this.$t("homepage.slideshow.animation1"),
           desc: ''
         },
         {
           img: '/img/slider/5.webp',
+          imgM: '/img/slider/5-mobile.webp',
           heading: this.$t("homepage.slideshow.animation2"),
           desc: ''
         },
         {
           img: '/img/slider/6.webp',
+          imgM: '/img/slider/6-mobile.webp',
           heading: this.$t("homepage.slideshow.heading2"),
           desc: ''
         },

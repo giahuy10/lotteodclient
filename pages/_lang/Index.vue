@@ -10,7 +10,7 @@
 
     <!-- <Interview/> -->
     <Newsletter/>
-    <div class="reservation">
+    <div class="reservation hidden-xs">
       <a href="#" @click.prevent="$router.push({ path: '/'+$store.state.locale+'/'+'ticket'})">
         <img src="/img/main_content_img4.webp" alt="Buy ticket">
       </a>
@@ -111,10 +111,20 @@ export default {
 .reservation {
   position: fixed;
   bottom: 0;
-  right: 0;
+  right: -100px;
   width: 150px;
   z-index: 9999;
+  transition: all 0.5s;
+  &:hover {
+    right: 0;
+    cursor: pointer;
+  }
 }
 
+@media screen and (max-width: 767px){
+  .hidden-xs {
+    display: none;
+  }
+}
 </style>
 
