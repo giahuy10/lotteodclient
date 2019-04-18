@@ -35,32 +35,32 @@ export default {
       sliding: null,
       sliders: [
         {
-          img: '/img/slider/1.JPG',
+          img: '/img/slider/1.webp',
           heading: this.$t("homepage.slideshow.heading1"),
           desc: ''
         },
         {
-          img: '/img/slider/2.JPG',
+          img: '/img/slider/2.webp',
           heading: this.$t("homepage.slideshow.animation1"),
           desc: ''
         },
         {
-          img: '/img/slider/5.JPG',
+          img: '/img/slider/5.webp',
           heading: this.$t("homepage.slideshow.animation2"),
           desc: ''
         },
         {
-          img: '/img/slider/6.JPG',
+          img: '/img/slider/6.webp',
           heading: this.$t("homepage.slideshow.heading2"),
           desc: ''
         },
         // {
-        //   img: '/img/slider/5.JPG',
+        //   img: '/img/slider/5.webp',
         //   heading: '',
         //   desc: ''
         // },
         // {
-        //   img: '/img/slider/6.JPG',
+        //   img: '/img/slider/6.webp',
         //   heading: '',
         //   desc: ''
         // }

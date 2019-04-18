@@ -36,44 +36,44 @@ export default {
       currentItem: '',
       items: [
         {
-          thumbnail: '1-thumb.JPG',
-          full: '1.JPG'
+          thumbnail: '1-thumb.webp',
+          full: '1.webp'
         },
         {
-          thumbnail: '2-thumb.JPG',
-          full: '2.JPG'
+          thumbnail: '2-thumb.webp',
+          full: '2.webp'
         },
         {
-          thumbnail: '3-thumb.JPG',
-          full: '3.JPG'
+          thumbnail: '3-thumb.webp',
+          full: '3.webp'
         },
         {
-          thumbnail: '4-thumb.png',
-          full: '4.png'
+          thumbnail: '4-thumb.webp',
+          full: '4.webp'
         },
         {
-          thumbnail: '5-thumb.JPG',
-          full: '5.JPG'
+          thumbnail: '5-thumb.webp',
+          full: '5.webp'
         },
         {
-          thumbnail: '6-thumb.JPG',
-          full: '6.JPG'
+          thumbnail: '6-thumb.webp',
+          full: '6.webp'
         },
         {
-          thumbnail: '7-thumb.jpg',
-          full: '7.jpg'
+          thumbnail: '7-thumb.webp',
+          full: '7.webp'
         },
         {
-          thumbnail: '8-thumb.jpg',
-          full: '8.jpg'
+          thumbnail: '8-thumb.webp',
+          full: '8.webp'
         },
         {
-          thumbnail: '9-thumb.JPG',
-          full: '9.JPG'
+          thumbnail: '9-thumb.webp',
+          full: '9.webp'
         },
         {
-          thumbnail: '10-thumb.jpeg',
-          full: '10.jpeg'
+          thumbnail: '10-thumb.webp',
+          full: '10.webp'
         }
       ],
       scroller: {
