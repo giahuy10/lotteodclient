@@ -269,10 +269,10 @@ img.img-logo {
     height: 40px;
 }
 .navbar-dark .navbar-nav .nav-link {
-    color: rgba(0, 0, 0, 0.5);
-   @media screen and (max-width: 767px) {
-        color: #fff;
-    }
+  color: rgba(0, 0, 0, 0.5);
+  @media screen and (max-width: 767px) {
+    color: #fff;
+  }
 }
 .social-right {
   position: fixed;
@@ -293,13 +293,13 @@ img.img-logo {
 
 .center-mobile {
   @media screen and (max-width: 767px) {
-        text-align: center !important;
-    }
+    text-align: center !important;
+  }
 }
 .visible-xs {
   display: none;
   @media screen and (max-width: 767px) {
-       display: inherit;
-    }
+    display: inherit;
+  }
 }
 </style>
