@@ -53,8 +53,14 @@ export default {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    @media screen and (max-width: 767px) {
+      margin-top: 0;
+    }
     .tab-item {
       width: calc(100% / 3);
+      @media screen and (max-width: 767px) {
+        width: 100%;
+      }
       text-align: center;
       text-transform: uppercase;
       // border-right: 1px solid #ccc;

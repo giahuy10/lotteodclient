@@ -29,6 +29,8 @@ export default {
     background-size: 100% 100%;
     @media screen and (max-width: 767px) {
       height: 200px;
+      background-size: auto;
+      background-position: center center;
     }
     .heading-title {
       position: absolute;
