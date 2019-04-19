@@ -143,6 +143,9 @@ export default {
 </script>
 <style lang="scss">
 .carousel-caption {
+  @media screen and (max-width: 767px){
+    display: none;
+  }
   bottom: 250px;
   h2 {
     font-size: 60px;
