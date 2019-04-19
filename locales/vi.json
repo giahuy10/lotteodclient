@@ -46,7 +46,7 @@
     "buyOffline": "<span> Liên hệ mua vé trực tiếp </span>",
     "buyName": "Nguyễn Thị Huyền",
     "unit": "(VND/Người)",
-    "discount": "<ul><li>Từ 9:00 đến 10:00 Giảm giá 50%. </li> <li>Từ 22:00 đến 23:00 Giảm giá 50%.</li> <li>Ưu đãi gia đình ( tối thiểu 2 người lớn và tối đa 5 trẻ nhỏ).Giảm giá cho 50% cho trẻ nhỏ.</li></ul>",
+    "discount": "<ul><li>Từ 9:00 đến 10:00 Giảm giá 50%. </li> <li>Từ 22:00 đến 23:00 Giảm giá 50%.</li> <li>Ưu đãi gia đình (Tối thiểu 2 người lớn và tối đa 5 trẻ nhỏ). Giảm giá 50% cho trẻ nhỏ.</li></ul>",
     "pricingTable": {
       "general": "Giá phổ thông",
       "domestic": "Giá ưu đãi*",
