@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <b-carousel v-if="device == 'mobile'"
       id="carousel-mobile"
       v-model="slide"
@@ -15,14 +14,10 @@
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
     >
-
       <!-- Slides with custom text -->
       <b-carousel-slide v-for="(item, index) in sliders" :key="index" :img-src="item.imgM">
         <h2 v-text="item.heading"></h2>
       </b-carousel-slide>
-
-
-
     </b-carousel>
     <b-carousel v-else-if="device == 'tablet'"
       id="carousel-tablet"
@@ -38,14 +33,10 @@
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
     >
-
       <!-- Slides with custom text -->
       <b-carousel-slide v-for="(item, index) in sliders" :key="index" :img-src="item.imgT">
         <h2 v-text="item.heading"></h2>
       </b-carousel-slide>
-
-
-
     </b-carousel>
     <b-carousel v-else
       id="carousel-desk"
@@ -61,17 +52,11 @@
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
     >
-
       <!-- Slides with custom text -->
       <b-carousel-slide v-for="(item, index) in sliders" :key="index" :img-src="item.img">
         <h2 v-text="item.heading"></h2>
       </b-carousel-slide>
-
-
-
     </b-carousel>
-
-
   </div>
 </template>
 <script>
@@ -97,7 +82,6 @@ export default {
       } else {
         return 'mobile'
       }
-
     }
   },
   data() {
