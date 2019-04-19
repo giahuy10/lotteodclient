@@ -73,7 +73,7 @@ export default {
         { hid: 'description', name: 'description', content:  this.$t('homepage.metaDesc')},
         { hid: 'og-title', property: 'og:title', content: this.$t('homepage.metaTitle') },
         { hid: 'og-description', property: 'og:description', content: this.$t('homepage.metaDesc') },
-        { hid: 'og-image', property: 'og:image', content: '/img/overview/1.Sky walk.jpg' },
+        { hid: 'og-image', property: 'og:image', content: 'http://observationdeck.lottecenter.com.vn/img/overview/1.Sky walk.jpg' },
 
       ]
     }
