@@ -91,40 +91,40 @@ export default {
       sliding: null,
       sliders: [
         {
-          img: '/img/slider/1.webp',
-          imgM: '/img/slider/1-mobile.webp',
-          imgT: '/img/slider/1-tablet.webp',
+          img: '/img/slider/1.JPG',
+          imgM: '/img/slider/1-mobile.JPG',
+          imgT: '/img/slider/1-tablet.JPG',
           heading: this.$t("homepage.slideshow.heading1"),
           desc: ''
         },
         {
-          img: '/img/slider/2.webp',
-          imgM: '/img/slider/2-mobile.webp',
-          imgT: '/img/slider/3-tablet.webp',
+          img: '/img/slider/2.JPG',
+          imgM: '/img/slider/2-mobile.JPG',
+          imgT: '/img/slider/3-tablet.JPG',
           heading: this.$t("homepage.slideshow.animation1"),
           desc: ''
         },
         {
-          img: '/img/slider/5.webp',
-          imgM: '/img/slider/5-mobile.webp',
-          imgT: '/img/slider/5-tablet.webp',
+          img: '/img/slider/5.JPG',
+          imgM: '/img/slider/5-mobile.JPG',
+          imgT: '/img/slider/5-tablet.JPG',
           heading: this.$t("homepage.slideshow.animation2"),
           desc: ''
         },
         {
-          img: '/img/slider/6.webp',
-          imgM: '/img/slider/6-mobile.webp',
-          imgT: '/img/slider/6-tablet.webp',
+          img: '/img/slider/6.JPG',
+          imgM: '/img/slider/6-mobile.JPG',
+          imgT: '/img/slider/6-tablet.JPG',
           heading: this.$t("homepage.slideshow.heading2"),
           desc: ''
         },
         // {
-        //   img: '/img/slider/5.webp',
+        //   img: '/img/slider/5.JPG',
         //   heading: '',
         //   desc: ''
         // },
         // {
-        //   img: '/img/slider/6.webp',
+        //   img: '/img/slider/6.JPG',
         //   heading: '',
         //   desc: ''
         // }

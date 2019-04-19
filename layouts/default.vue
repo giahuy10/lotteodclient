@@ -165,6 +165,9 @@ export default {
   nav.navbar {
     &.sticky {
       background: rgba(255, 255, 255, 0.7);
+       @media screen and (max-width: 767px){
+         background: rgb(0, 0, 0);
+       }
     }
     //
     @media screen and (max-width: 767px){
@@ -204,6 +207,9 @@ export default {
 
           > a {
             color: #000 !important;
+            @media screen and (max-width: 767px){
+              color: #fff !important;
+            }
           }
         }
       }
