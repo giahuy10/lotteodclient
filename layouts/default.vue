@@ -268,6 +268,9 @@ img.img-logo {
 }
 .navbar-dark .navbar-nav .nav-link {
     color: rgba(0, 0, 0, 0.5);
+   @media screen and (max-width: 767px) {
+        color: #fff;
+    }
 }
 .social-right {
   position: fixed;

@@ -29,7 +29,7 @@
     },
     "footer": {
       "line1": "54 Liễu Giai, Quận Ba Đình, Hà Nội ",
-      "line2": "Điện thoại : 024 3333 6018 - Di động : 098 7243 922",
+      "line2": "Điện thoại : 024 3333 6018",
       "line3": "COPYRIGHT ©2019 LOTTE Center Hanoi. All rights reserved."
     },
     "readmore": "Xem thêm"
@@ -44,6 +44,7 @@
     "fee": "<span> Giá vé</span>",
     "buy": "<span> Mua vé Online </span>",
     "buyOffline": "<span> Liên hệ mua vé trực tiếp </span>",
+    "buyName": "Nguyễn Thị Huyền",
     "unit": "(VND/Người)",
     "discount": "<ul><li>Từ 9:00 đến 10:00 Giảm giá 50%. </li> <li>Từ 22:00 đến 23:00 Giảm giá 50%.</li> <li>Ưu đãi gia đình ( tối thiểu 2 người lớn và tối đa 5 trẻ nhỏ).Giảm giá cho 50% cho trẻ nhỏ.</li></ul>",
     "pricingTable": {

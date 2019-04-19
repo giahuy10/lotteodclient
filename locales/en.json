@@ -29,7 +29,7 @@
     },
     "footer": {
       "line1": "54 Lieu Giai, Ba Dinh District, Hanoi",
-      "line2": "Tel : 024 3333 6018 - Mobile : 098 7243 922 ",
+      "line2": "Tel : 024 3333 6018",
       "line3": "COPYRIGHT ©2019 LOTTE enter Hanoi. All rights reserved."
     },
     "readmore": "Readmore"
@@ -45,6 +45,7 @@
     "unit": "(Unit : VND/Person)",
     "buy": "<span> Buy ticket online </span>",
     "buyOffline": "<span> Buy ticket offline </span>",
+    "buyName": "Nguyen Thi Huyen",
     "discount": "<ul><li>From 9:00 to 10:00 Discount 50%. </li> <li>From 22:00 to 23:00 Discount 50%.</li> <li>Family package (Min 2 adults & Max 5 kids) Get 50% off for kid only.</li></ul>",
     "pricingTable": {
       "general": "General",

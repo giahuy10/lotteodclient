@@ -56,7 +56,7 @@
           </ul>
         </div>
         <p v-html="$t('ticket.buyOffline')"></p>
-        <p style="font-weight: bold">Nguyen Thi Huyen</p>
+        <p style="font-weight: bold" v-text="$t('ticket.buyName')"></p>
         <p v-html="$t('homepage.footer.line2')"></p>
         <p>Email: <a href="mailto:huyenguyenod@lotte.vn"> huyenguyenod@lotte.vn </a></p>
 
