@@ -47,6 +47,7 @@
         <li><a href="https://www.lottecenter.com.vn" title="Lotte Center Hanoi" target="_blank"><img src="/img/icons/apple-touch-icon-60x60.png" alt=""></a></li>
         <li><a href="https://www.facebook.com/observationdeckhanoi/" title="Facebook" target="_blank"><img src="/img/icons/facebook_circle-512.png" alt=""></a></li>
         <li><a href="https://www.instagram.com/observationdeckhanoi/" title="Instagram" target="_blank"><img src="/img/icons/instagram-colourful-icon.png" alt=""></a></li>
+        <li class="visible-xs"><a href="tel:02433336018"><img src="/img/icons/hotline2.gif" alt=""></a></li>
       </ul>
     </div>
   </div>
@@ -293,6 +294,12 @@ img.img-logo {
 .center-mobile {
   @media screen and (max-width: 767px) {
         text-align: center !important;
+    }
+}
+.visible-xs {
+  display: none;
+  @media screen and (max-width: 767px) {
+       display: inherit;
     }
 }
 </style>
