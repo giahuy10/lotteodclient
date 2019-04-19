@@ -279,6 +279,9 @@ img.img-logo {
   z-index: 9999;
   right: 0;
   top: 45%;
+  @media screen and (max-width: 767px) {
+    top: 40%;
+  }
   ul {
     list-style: none;
     li {

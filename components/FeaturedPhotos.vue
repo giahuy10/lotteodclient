@@ -209,9 +209,15 @@ export default {
     top: 45%;
     &.next {
       right: -20px;
+      @media screen and (max-width: 767px){
+        right: -15px;
+      }
     }
     &.prev {
       left: -20px;
+      @media screen and (max-width: 767px){
+        left: -15px;
+      }
       img {
         transform: rotate(180deg)
       }
