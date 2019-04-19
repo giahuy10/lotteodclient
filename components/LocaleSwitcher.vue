@@ -81,6 +81,9 @@ export default {
     border: 1px solid #666;
     font-size: 20px;
     color: #666 !important;
+    @media screen and (max-width: 767px) {
+      border: 0;
+    }
   }
 }
 </style>
