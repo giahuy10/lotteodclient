@@ -55,6 +55,11 @@
             <li><a href="https://www.lotte.vn/product/3940441/e-voucher-tat-ca-cac-ngay-ve-tham-quan-dai-quan-sat-lotte-toa-nha-lotte-center-1027648.html" target="_blank">Lotte.vn</a></li>
           </ul>
         </div>
+        <p v-html="$t('ticket.buyOffline')"></p>
+        <p style="font-weight: bold">Nguyen Thi Huyen</p>
+        <p v-html="$t('homepage.footer.line2')"></p>
+        <p>Email: <a href="mailto:huyenguyenod@lotte.vn"> huyenguyenod@lotte.vn </a></p>
+
         <!-- end board_foot -->
       </div>
 
