@@ -242,6 +242,7 @@ export default {
 
       @media screen and (max-width: 767px) {
         justify-content: center !important;
+        padding-bottom: 20px;
 
     }
   }
@@ -289,4 +290,9 @@ img.img-logo {
   }
 }
 
+.center-mobile {
+  @media screen and (max-width: 767px) {
+        text-align: center !important;
+    }
+}
 </style>

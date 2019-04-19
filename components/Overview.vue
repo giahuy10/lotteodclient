@@ -213,6 +213,7 @@ export default {
     margin: 0 5px;
     a {
       color: #63574c;
+      width: 150px;
       background: none;
       border: 1px solid;
       border-radius: 0;
