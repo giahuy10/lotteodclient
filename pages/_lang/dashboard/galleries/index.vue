@@ -23,14 +23,15 @@
               <td><img :src="item.full" alt="" class="photo-thumb"></td>
               <td>{{item.homepage ? 'Yes' : 'No'}}</td>
               <td>
-                <a href="#" @click.prevent="openPhoto(item._id)" ><i class="fa fa-pencil"></i></a>
-                <a href="#" @click.prevent="deletePhoto(item._id)"><i class="fa fa-trash"></i></a>
+
+                <!-- <a href="#" @click.prevent="openPhoto(item._id)" ><img src="/edit.png" alt=""></a> -->
+                <a href="#" @click.prevent="deletePhoto(item._id)"><img src="/delete.png" alt=""></a>
               </td>
             </tr>
           </tbody>
         </table>
       </div>
-      <!-- <nav aria-label="Page navigation example" v-if="pagesNumber.length > 1">
+      <nav aria-label="Page navigation example" v-if="pagesNumber.length > 1">
           <ul class="pagination">
               <li v-if="pagination.pagesCurrent > 1" class="page-item">
                   <a class="page-link" href="#" aria-label="Previous"
@@ -47,7 +48,7 @@
                   </a>
               </li>
           </ul>
-      </nav> -->
+      </nav>
     </div>
   </div>
 </template>
@@ -82,6 +83,30 @@ export default {
         .then(res => console.log(res))
         .catch(err => console.log(err))
         // this.getItems()
+    }
+  },
+  computed: {
+    pagination () {
+      return this.$store.state.galleries.pagination
+    },
+    isActived: function () {
+      return this.pagination.pagesCurrent;
+    },
+    pagesNumber: function () {
+      var from = this.pagination.pagesCurrent - this.offset;
+      if (from < 1) {
+        from = 1;
+      }
+      var to = from + (this.offset * 2);
+      if (to >= this.pagination.pagesTotal) {
+        to = this.pagination.pagesTotal;
+      }
+      var pagesArray = [];
+      while (from <= to) {
+        pagesArray.push(from);
+        from++;
+      }
+      return pagesArray;
     }
   }
 }

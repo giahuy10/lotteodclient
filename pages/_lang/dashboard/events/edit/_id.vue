@@ -1,7 +1,6 @@
 <template>
   <div class="edit-event">
     <h2>{{ item && item.slug ? 'Update event' : 'Create event'}}</h2>
-
     <form action="" v-on:submit.prevent="saveData">
       <b-tabs content-class="mt-3">
         <b-tab title="Vietnamese" active>
@@ -48,14 +47,11 @@
             </div>
           </div>
         </b-tab>
-
         <b-tab title="Other">
           <div class="form-group row">
             <label class="col-sm-2 col-form-label">Image</label>
             <div class="col-sm-10">
-
               <input type="file" class="form-control" placeholder="" ref="file" v-on:change="handleFileUpload()">
-
             </div>
           </div>
           <div class="form-group row">
@@ -63,9 +59,8 @@
               <div v-if="loading">
                 <img style="width: 40px;" src="https://www.wpfaster.org/wp-content/uploads/2013/06/circle-loading-gif.gif" alt="">
               </div>
-              <img v-if="item.thumbnail" style="width: 200px;" :src="item.thumbnail" alt="">
+              <img v-if="item.full" style="width: 200px;" :src="item.full" alt="">
             </div>
-
           </div>
           <div class="form-group row">
             <label class="col-sm-2 col-form-label">Enable</label>
@@ -79,14 +74,9 @@
               <input type="checkbox" class="form-check-input" placeholder="" v-model="item.homepage">
             </div>
           </div>
-
         </b-tab>
-
       </b-tabs>
-
       <button class="btn btn-success btn-block" @click.prevent="saveData">Save</button>
-
-
     </form>
   </div>
 </template>
@@ -154,7 +144,7 @@ export default {
         }
         ).then(res => {
           console.log(res)
-          this.item.thumbnail = res.data.thumbnail
+          this.item.full = res.data.full
           this.loading = false
         })
         .catch(err => {

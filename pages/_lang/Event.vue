@@ -20,22 +20,22 @@
         </div>
       </div>
       <nav aria-label="Page navigation example" v-if="pagesNumber.length > 1">
-          <ul class="pagination">
-              <li v-if="pagination.pagesCurrent > 1" class="page-item">
-                  <a class="page-link" href="#" aria-label="Previous"
-                      @click.prevent="changePage(pagination.pagesCurrent - 1)">
-                      <span aria-hidden="true">«</span>
-                  </a>
-              </li>
-              <li v-for="(page, index) in pagesNumber" :key="index" class="page-item" v-bind:class="[ page == isActived ? 'active' : '']">
-                  <a class="page-link" href="#" @click.prevent="changePage(page)">{{ page }}</a>
-              </li>
-              <li class="page-item" v-if="pagination.pagesCurrent < pagination.pagesTotal">
-                  <a class="page-link" href="#" aria-label="Next" @click.prevent="changePage(pagination.pagesCurrent + 1)">
-                      <span aria-hidden="true">»</span>
-                  </a>
-              </li>
-          </ul>
+        <ul class="pagination">
+          <li v-if="pagination.pagesCurrent > 1" class="page-item">
+              <a class="page-link" href="#" aria-label="Previous"
+                  @click.prevent="changePage(pagination.pagesCurrent - 1)">
+                  <span aria-hidden="true">«</span>
+              </a>
+          </li>
+          <li v-for="(page, index) in pagesNumber" :key="index" class="page-item" v-bind:class="[ page == isActived ? 'active' : '']">
+              <a class="page-link" href="#" @click.prevent="changePage(page)">{{ page }}</a>
+          </li>
+          <li class="page-item" v-if="pagination.pagesCurrent < pagination.pagesTotal">
+              <a class="page-link" href="#" aria-label="Next" @click.prevent="changePage(pagination.pagesCurrent + 1)">
+                  <span aria-hidden="true">»</span>
+              </a>
+          </li>
+        </ul>
       </nav>
     </div>
 

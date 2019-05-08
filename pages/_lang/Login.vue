@@ -1,18 +1,19 @@
 <template>
   <div class="login">
-    <header-banner :title="$t('event.headerTitle')" :desc="$t('event.headerDesc')" :img="headerImage"></header-banner>
+    <header-banner :title="'Login'" :desc="''" :img="headerImage"></header-banner>
 
     <div class="container">
+      <div class="alert alert-warning" v-if="err" v-text="err"></div>
       <label for="email">
-        <input id="email" type="email" value="test">
+        <input id="email" class="form-control" type="email" v-model="loginData.username" placeholder="Username">
       </label>
       <label for="password">
-        <input id="password" type="password" value="test">
+        <input id="password" class="form-control" type="password" v-model="loginData.password" placeholder="Password">
       </label>
-      <button @click="postLogin">
+      <button class="btn btn-success" @click="postLogin">
         login
       </button>
-      <p>The credentials are not verified for the example purpose.</p>
+
     </div>
   </div>
 </template>
@@ -28,20 +29,29 @@ export default {
   data () {
     return {
       headerImage: '/img/header/lotte_about_visual.jpg',
-      screenWidth: ''
+      screenWidth: '',
+      loginData: {
+        username: '',
+        password: ''
+      },
+      err: ''
     }
   },
   middleware: 'notAuthenticated',
   methods: {
     postLogin() {
-      setTimeout(() => { // we simulate the async request with timeout.
-        const auth = {
-          accessToken: 'someStringGotFromApiServiceWithAjax'
-        }
-        this.$store.commit('SET_AUTH', auth) // mutating to store for client rendering
-        Cookie.set('auth', auth) // saving token in cookie for server rendering
-        this.$router.push('/'+this.currentLocale+'/dashboard')
-      }, 1000)
+      this.$axios.$post('/api/users/login', this.loginData)
+        .then(res => {
+          console.log(res)
+          const auth = {
+            accessToken: res.data
+          }
+          this.$store.commit('SET_AUTH', auth) // mutating to store for client rendering
+          Cookie.set('auth', auth) // saving token in cookie for server rendering
+          // this.$router.push('/'+this.currentLocale+'/dashboard')
+        })
+        .catch(err => this.err = err.response.data.msg)
+
     }
   },
   computed: {

@@ -5,8 +5,6 @@
       <div class="ticketing_counter">
         <!-- <h3>{{ $t("ticket.ticketCounter") }}</h3>
         <p>{{ $t("ticket.ticketCounterDesc") }}</p>
-
-
         <hr> -->
       </div>
       <div class="observatory_use_guide">
@@ -35,7 +33,6 @@
                     <td v-html="$t('ticket.pricingTable.adult')"></td>
                     <td  class="align-middle">180,000</td>
                   </tr>
-
                   <tr>
                     <td v-html="$t('ticket.pricingTable.children')"></td>
                     <td  class="align-middle">120,000</td>
@@ -59,10 +56,8 @@
         <p style="font-weight: bold" v-text="$t('ticket.buyName')"></p>
         <p v-html="$t('homepage.footer.line2')"></p>
         <p>Email: <a href="mailto:huyenguyenod@lotte.vn"> huyenguyenod@lotte.vn </a></p>
-
         <!-- end board_foot -->
       </div>
-
     </div>
     <!-- <div class="rich-snippets">
       <div itemscope itemtype="https://schema.org/Product">

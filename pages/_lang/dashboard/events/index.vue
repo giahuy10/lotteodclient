@@ -21,14 +21,14 @@
               <td><a href="#" @click.prevent="openEvent(item.slug)" v-text="item.title_vi"></a></td>
               <td v-text="item.date_vi"></td>
               <td>
-                <a href="#" @click.prevent="openEvent(item.slug)" ><i class="fa fa-pencil"></i></a>
-                <a href="#" @click.prevent="deleteEvent(item.slug)"><i class="fa fa-trash"></i></a>
+                <a href="#" @click.prevent="openEvent(item.slug)" ><img src="/edit.png" alt=""></a>
+                <a href="#" @click.prevent="deleteEvent(item.slug)"><img src="/delete.png" alt=""></a>
               </td>
             </tr>
           </tbody>
         </table>
       </div>
-      <!-- <nav aria-label="Page navigation example" v-if="pagesNumber.length > 1">
+      <nav aria-label="Page navigation example" v-if="pagesNumber.length > 1">
           <ul class="pagination">
               <li v-if="pagination.pagesCurrent > 1" class="page-item">
                   <a class="page-link" href="#" aria-label="Previous"
@@ -45,7 +45,7 @@
                   </a>
               </li>
           </ul>
-      </nav> -->
+      </nav>
     </div>
   </div>
 </template>
@@ -58,15 +58,12 @@ export default {
     }
   },
   async asyncData ({ store, query }) {
-    var limit = 0
-    if (query && query.page) {
-      limit = (query.page-1) * 12
-    }
-    await store.dispatch('event/getEvents', { limit: limit, locale: store.state.locale })
+
+    await store.dispatch('event/getEvents', { page: query.page })
   },
   computed: {
     events () {
-      console.log(this.$store.state.event.events)
+      // console.log(this.$store.state.event)
       return this.$store.state.event.events
     },
     pagination () {
@@ -75,25 +72,26 @@ export default {
     isActived: function () {
       return this.pagination.pagesCurrent;
     },
-    // pagesNumber: function () {
-    //   var from = this.pagination.pagesCurrent - this.offset;
-    //   if (from < 1) {
-    //     from = 1;
-    //   }
-    //   var to = from + (this.offset * 2);
-    //   if (to >= this.pagination.pagesTotal) {
-    //     to = this.pagination.pagesTotal;
-    //   }
-    //   var pagesArray = [];
-    //   while (from <= to) {
-    //     pagesArray.push(from);
-    //     from++;
-    //   }
-    //   return pagesArray;
-    // }
+    pagesNumber: function () {
+      var from = this.pagination.pagesCurrent - this.offset;
+      if (from < 1) {
+        from = 1;
+      }
+      var to = from + (this.offset * 2);
+      if (to >= this.pagination.pagesTotal) {
+        to = this.pagination.pagesTotal;
+      }
+      var pagesArray = [];
+      while (from <= to) {
+        pagesArray.push(from);
+        from++;
+      }
+      return pagesArray;
+    }
   },
   methods : {
     changePage: function (page) {
+      // console.log(page)
       let newPag = {
         limitstart: (page-1) * this.pagination.limit,
         limit: this.pagination.limit,
@@ -104,7 +102,7 @@ export default {
         pagesTotal: this.pagination.pagesTotal
       }
       this.$store.dispatch('event/changePagination', newPag)
-      this.$router.push({ path : '/vi/event', query: { page : page}})
+      this.$router.push({ path : '/'+this.$store.state.locale+'/dashboard/events', query: { page : page}})
     },
     openEvent (eventId) {
       // console.log(this.$router.options.routes)
