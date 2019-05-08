@@ -48,7 +48,7 @@ export default {
           }
           this.$store.commit('SET_AUTH', auth) // mutating to store for client rendering
           Cookie.set('auth', auth) // saving token in cookie for server rendering
-          // this.$router.push('/'+this.currentLocale+'/dashboard')
+          this.$router.push('/'+this.currentLocale+'/dashboard')
         })
         .catch(err => this.err = err.response.data.msg)
 

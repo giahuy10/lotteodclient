@@ -191,7 +191,7 @@ export default {
           font-size: 20px;
           // padding: 10px 20px !important;
           color: #fff !important;
-          &.active {
+          &.active, &.nuxt-link-exact-active {
             color: #e4111d !important;
           }
           // text-transform: uppercase
