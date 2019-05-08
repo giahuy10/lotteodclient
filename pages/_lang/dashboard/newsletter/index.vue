@@ -4,28 +4,28 @@
       <div class="toolbar">
         <h2>Subscribers</h2>
       </div>
-      
+
       <div class="data">
         <table class="table table-bordered">
           <thead>
             <tr>
-            
+
               <th>Name</th>
               <th>Email</th>
-             
-             
+
+
               <th></th>
             </tr>
           </thead>
           <tbody>
             <tr v-for="(item, index) in items" :key="index">
-           
+
               <td v-text="item.name"></td>
               <td v-text="item.email"></td>
-           
-            
+
+
               <td>
-                <a href="#" @click.prevent="deleteEvent(item._id)"><i class="fa fa-trash"></i></a>
+                <a href="#" @click.prevent="deleteEvent(item._id)"><img src="/delete.png" alt=""></a>
               </td>
             </tr>
           </tbody>
@@ -65,7 +65,7 @@ export default {
     this.getItems()
   },
   computed: {
-    
+
     pagination () {
       return this.$store.state.event.pagination
     },
