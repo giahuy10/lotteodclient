@@ -20,7 +20,8 @@
       "signupDesc": "Enter your email address below to receive periodic emails about special offers and upcoming events.",
       "signupButton": "Signup",
       "signupEmail": "Enter your email",
-      "signupSuccess": "Thanks for your subscription!"
+      "signupSuccess": "Thanks for your subscription!",
+      "signupError": "Email is existed!"
     },
     "signup": {
       "blankError": "Email cannot be blank",

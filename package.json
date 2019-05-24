@@ -25,6 +25,7 @@
     "svg-country-flags": "^1.2.6",
     "vue-i18n": "^7.3.2",
     "vue-masonry-css": "^1.0.3",
+    "vue-socket.io": "^3.0.7",
     "vue2-dropzone": "^3.5.8"
   },
   "devDependencies": {

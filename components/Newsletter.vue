@@ -7,8 +7,13 @@
           <p>{{ $t("homepage.modtuleTitle.signupDesc") }}</p>
         </div>
         <div class="col-12 col-md-6 d-flex align-items-center justify-content-end">
-          <div v-if="success">
-            <div class="alert alert-success" v-html="$t('homepage.modtuleTitle.signupSuccess')"></div>
+          <div v-if="success || error">
+            <div v-if="success">
+              <div class="alert alert-success" v-html="$t('homepage.modtuleTitle.signupSuccess')"></div>
+            </div>
+            <div v-if="error">
+              <div class="alert alert-warning" v-html="$t('homepage.signup.duplicatedError')"></div>
+            </div>
           </div>
           <b-form inline v-else>
             <label class="sr-only" for="email">{{ $t("homepage.modtuleTitle.signupName") }}</label>
@@ -31,7 +36,8 @@ export default {
         email: '',
         name: ''
       },
-      success: false
+      success: false,
+      error: false
 
     }
   },
@@ -42,7 +48,7 @@ export default {
       } else {
         this.$axios.post('/api/newsletters', this.subscriber)
         .then(res => this.success = true)
-        .catch(err => console.log(err))
+        .catch(err => this.error = true)
       }
     }
   }

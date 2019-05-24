@@ -20,7 +20,8 @@
       "signupDesc": "Vui lòng nhập email của bạn để nhận được những thông tin ưu đãi và sự kiện mới nhất",
       "signupButton": "Đăng ký",
       "signupEmail": "Nhập email",
-      "signupSuccess": "Cảm ơn bạn đã đăng ký!"
+      "signupSuccess": "Đăng ký email thành công. Quý khách vui lòng kiểm tra email để xác nhận việc đăng ký.",
+      "signupError": "Email này đã được đăng ký!"
     },
     "signup": {
       "blankError": "Email không được để trống",

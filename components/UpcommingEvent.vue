@@ -30,6 +30,7 @@ export default {
 
   methods: {
     openEvent (event) {
+      console.log('ok')
       this.$router.push({name: 'lang-event-slug', params: {slug: event.slug, id: event.slug }})
     }
   },

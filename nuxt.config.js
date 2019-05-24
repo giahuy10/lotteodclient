@@ -38,7 +38,7 @@ module.exports = {
   */
   plugins: [
     { src: '~/plugins/i18n.js'},
-    // { src: '~/plugins/editor.js', ssr: false}
+    // { src: '~/plugins/socketio.js', ssr: false}
   ],
 
   /*
