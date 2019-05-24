@@ -52,6 +52,13 @@
             <li><a href="https://www.lotte.vn/product/3940441/e-voucher-tat-ca-cac-ngay-ve-tham-quan-dai-quan-sat-lotte-toa-nha-lotte-center-1027648.html" target="_blank">Lotte.vn</a></li>
           </ul>
         </div>
+        <div v-else>
+          <p v-html="$t('ticket.buy')"></p>
+          <ul>
+            <li><a href="https://www.klook.com/en-US/activity/22529-lotte-observation-deck-ticket-hanoi/?krt=s20&krid=83648bbc-6b51-4dd0-7738-630edadedec7" target="_blank">Klook</a></li>
+
+          </ul>
+        </div>
         <p v-html="$t('ticket.buyOffline')"></p>
         <p style="font-weight: bold" v-text="$t('ticket.buyName')"></p>
         <p v-html="$t('homepage.footer.line2')"></p>
