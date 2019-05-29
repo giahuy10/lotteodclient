@@ -8,7 +8,7 @@
             <div v-for="(event, index) in events" :key="index" class="event col-12 col-md-4">
               <div class="event-content" @click="openEvent(event)">
                 <div class="event-img">
-                  <img :src="event.thumbnail" :alt="event[titleText]">
+                  <img :src="event.full" :alt="event[titleText]">
                 </div>
                 <div class="event-title">
                   <h4>{{event[titleText]}}</h4>
