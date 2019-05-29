@@ -136,6 +136,7 @@ export default {
       this.file = this.$refs.file.files[0];
       let formData = new FormData();
       formData.append('file', this.file);
+      formData.append('type', 'poster')
       this.$axios.post( '/api/events/upload', formData,
         {
           headers: {
