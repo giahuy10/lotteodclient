@@ -34,6 +34,7 @@
               {{ $t("homepage.footer.line1") }}
               <br>{{ $t("homepage.footer.line2") }}
               <br>{{ $t("homepage.footer.line3") }}
+              <br><nuxt-link to="/policy">Privacy Policy</nuxt-link>
             </p>
           </div>
 
