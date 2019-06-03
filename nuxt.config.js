@@ -18,6 +18,9 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  serverMiddleware: [
+    '~/api'
+  ],
   router: {
     middleware: ['i18n']
   },
@@ -57,7 +60,7 @@ module.exports = {
   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
-    baseURL: 'http://admin.lotteskywalk.tk'
+    // baseURL: '/'
   },
 
   /*

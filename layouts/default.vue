@@ -12,15 +12,11 @@
               </b-nav-item>
               <LocaleSwitcher/>
             </b-navbar-nav>
-
           </b-collapse>
         </div>
-
       </b-navbar>
-
     </header>
     <main>
-
     <nuxt/>
     </main>
     <footer>
@@ -37,11 +33,8 @@
               <br><nuxt-link to="/policy">Privacy Policy</nuxt-link>
             </p>
           </div>
-
         </div>
       </div>
-
-
     </footer>
     <div class="social-right">
       <ul>
