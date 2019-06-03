@@ -8,7 +8,7 @@ var Jimp = require('jimp');
 var config = require('../public/configuration.json')
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, '../client/static/images/events')
+    cb(null, '/static/images/events')
   },
   filename: function (req, file, cb) {
     cb(null, moment().format('YYYY-MM-DD') +"-"+file.originalname);
@@ -74,25 +74,25 @@ router
     model.findByIdAndUpdate(
     // the id of the item to find
       req.params.id,
-      
-      // the change to be made. Mongoose will smartly combine your existing 
+
+      // the change to be made. Mongoose will smartly combine your existing
       // document with this change, which allows for partial updates too
       req.body,
-      
-      // an option that asks mongoose to return the updated version 
+
+      // an option that asks mongoose to return the updated version
       // of the document instead of the pre-updated one.
       {new: true},
-      
+
       // the callback function
       (err, todo) => {
       // Handle any possible database errors
           if (err) return res.status(500).json(err);
           return res.json(todo);
       }
-    ) 
+    )
   })
   .post( '/upload', upload.single( 'file' ), function( req, res, next ) {
-    
+
     if ( !req.file.mimetype.startsWith( 'image/' ) ) {
       return res.status( 422 ).json( {
         error : 'The uploaded file must be an image'
@@ -126,15 +126,15 @@ router
           // .greyscale() // set greyscale
           .write(thumbnail); // save
       });
-      
+
       return res.status( 200 ).json( {
         thumbnail: folder+ 'thumb-'+moment().format('YYYY-MM-DD') +"-"+req.file.originalname,
         full: folder+req.file.filename,
-    
+
         original: req.file.originalname,
       } );
     }
-    
+
   })
   .delete('/:_id', (req, res) => {
     model.findByIdAndRemove(req.params._id, (err, model) => {
