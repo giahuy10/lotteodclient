@@ -8,7 +8,7 @@ var Jimp = require('jimp');
 var config = require('../public/configuration.json')
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, '../static/images/events')
+    cb(null, './static/images/events')
   },
   filename: function (req, file, cb) {
     cb(null, moment().format('YYYY-MM-DD') +"-"+file.originalname);
