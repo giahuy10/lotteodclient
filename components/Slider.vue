@@ -100,7 +100,7 @@ export default {
         {
           img: '/img/slider/2.JPG',
           imgM: '/img/slider/2-mobile.JPG',
-          imgT: '/img/slider/3-tablet.JPG',
+          imgT: '/img/slider/2-tablet.JPG',
           heading: this.$t("homepage.slideshow.animation1"),
           desc: ''
         },
