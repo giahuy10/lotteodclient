@@ -46,9 +46,6 @@
         <div v-if="$store.state.locale == 'vi'">
           <p v-html="$t('ticket.buy')"></p>
           <ul>
-            <li><a href="https://www.adayroi.com/ve-tron-goi-tham-quan-dai-quan-sat-lotte-danh-cho-01-nguoi-p-2118702?offer=2118702_QJT" target="_blank">Adayroi</a></li>
-            <li><a href="https://www.dealtoday.vn/ha-noi/ve-tron-goi-tham-quan-va-post-card-tai-dai-quan-sat-lotte-42731" target="_blank">Deal Today</a></li>
-            <li><a href="https://ticket.hotdeal.vn/event/lotte-observation-deck-dai-quan-sat-lotte.95" target="_blank">Hot Deal</a></li>
             <li><a href="https://www.lotte.vn/product/3940441/e-voucher-tat-ca-cac-ngay-ve-tham-quan-dai-quan-sat-lotte-toa-nha-lotte-center-1027648.html" target="_blank">Lotte.vn</a></li>
           </ul>
         </div>
