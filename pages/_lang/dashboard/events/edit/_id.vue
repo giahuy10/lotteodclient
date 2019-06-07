@@ -157,6 +157,7 @@ export default {
     saveData () {
       if (this.$route.params.id != 0) {
         console.log('update item')
+        console.log(this.item)
         this.$axios.put('/api/events/'+this.item._id, this.item)
         .then(res => console.log(res))
         .catch(err => console.log(err.response))
