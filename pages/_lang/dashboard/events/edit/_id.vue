@@ -109,7 +109,8 @@ export default {
       },
       init: {
         plugins: 'print preview fullpage searchreplace autolink directionality visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount imagetools textpattern help',
-        images_upload_url: 'https://admin.lotteskywalk.tk/api/events/upload?editor=true',
+        images_upload_url: 'http://observationdeck.lottecenter.com.vn/api/events/upload?editor=true',
+
       },
 
       toolbar: 'formatselect | bold italic strikethrough forecolor backcolor permanentpen formatpainter | link image media pageembed | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent | removeformat | addcomment',
