@@ -76,6 +76,7 @@
           </div>
         </b-tab>
       </b-tabs>
+      <div class="alert alert-success" v-if="saved">Saved!</div>
       <button class="btn btn-success btn-block" @click.prevent="saveData">Save</button>
     </form>
   </div>
@@ -93,6 +94,7 @@ export default {
   data () {
     return {
       //_id: 0,
+      saved: false,
       loading: false,
       item: {
         //_id: 0,
@@ -155,17 +157,19 @@ export default {
         })
     },
     saveData () {
+      this.saved = false
       if (this.$route.params.id != 0) {
         console.log('update item')
         console.log(this.item)
         this.$axios.put('/api/events/'+this.item._id, this.item)
-        .then(res => console.log(res))
+        .then(res => {
+          this.saved = true
+        })
         .catch(err => console.log(err.response))
       } else {
         console.log('insert item')
         this.$axios.post('/api/events', this.item)
         .then(res => {
-          console.log(res)
           this.$router.push({name: 'lang-dashboard-events-edit-id', params: { id: res.data }})
         })
         .catch(err => console.log(err.response))
